@@ -1,0 +1,9 @@
+c:\users\administrator\documents\visual studio 2012\Projects\Billiard Club\Billiard Club\bin\Debug\Billiard Club.exe.config
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\Billiard Club\Billiard Club\bin\Debug\Billiard Club.exe
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\Billiard Club\Billiard Club\bin\Debug\Billiard Club.pdb
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\Billiard Club\Billiard Club\obj\Debug\Billiard Club.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\Billiard Club\Billiard Club\obj\Debug\Billiard_Club.Form1.resources
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\Billiard Club\Billiard Club\obj\Debug\Billiard_Club.Properties.Resources.resources
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\Billiard Club\Billiard Club\obj\Debug\Billiard Club.csproj.GenerateResource.Cache
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\Billiard Club\Billiard Club\obj\Debug\Billiard Club.exe
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\Billiard Club\Billiard Club\obj\Debug\Billiard Club.pdb
