@@ -15,6 +15,13 @@ namespace Billiard_Club
         public Form1()
         {
             InitializeComponent();
+            lblDate.Text = DateTime.Now.ToShortDateString();
+            lblTime.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
