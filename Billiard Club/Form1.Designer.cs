@@ -30,15 +30,19 @@
         {
             this.btnQuit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.lblPrice = new System.Windows.Forms.Label();
-            this.lblTimeCounter = new System.Windows.Forms.Label();
+            this.mtbDuration = new System.Windows.Forms.MaskedTextBox();
+            this.lblThePrice1 = new System.Windows.Forms.Label();
+            this.lblTimeCounter1 = new System.Windows.Forms.Label();
+            this.lblTimeIn1 = new System.Windows.Forms.Label();
+            this.btnStop1 = new System.Windows.Forms.Button();
+            this.btnStart1 = new System.Windows.Forms.Button();
+            this.label324321 = new System.Windows.Forms.Label();
+            this.label43241 = new System.Windows.Forms.Label();
             this.lblDurationOfTime = new System.Windows.Forms.Label();
-            this.lblTimeIn = new System.Windows.Forms.Label();
+            this.label432 = new System.Windows.Forms.Label();
             this.tbPlayerName = new System.Windows.Forms.TextBox();
             this.lblPlayerName = new System.Windows.Forms.Label();
-            this.lblTableStatus = new System.Windows.Forms.Label();
+            this.lblTableStatus1 = new System.Windows.Forms.Label();
             this.lblTable1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -50,8 +54,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.lblTableStatus2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -61,7 +65,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lblTableStatus3 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
@@ -72,10 +76,19 @@
             this.label19 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.lblTableStatus4 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.panelX = new System.Windows.Forms.Panel();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
@@ -84,9 +97,9 @@
             this.label33 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
+            this.lblTableStatus7 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.label37 = new System.Windows.Forms.Label();
@@ -95,9 +108,9 @@
             this.label40 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
+            this.lblTableStatus6 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.label44 = new System.Windows.Forms.Label();
@@ -106,28 +119,23 @@
             this.label47 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
+            this.lblTableStatus5 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.rbDark = new System.Windows.Forms.RadioButton();
             this.lblTheme = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.lblTime = new System.Windows.Forms.Label();
+            this.nudHourlyPrice = new System.Windows.Forms.NumericUpDown();
+            this.lblHourlyPrice = new System.Windows.Forms.Label();
+            this.btnPause1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
+            this.panelX.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHourlyPrice)).BeginInit();
             this.SuspendLayout();
             // 
             // btnQuit
@@ -148,62 +156,105 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.lblPrice);
-            this.panel1.Controls.Add(this.lblTimeCounter);
+            this.panel1.Controls.Add(this.mtbDuration);
+            this.panel1.Controls.Add(this.lblThePrice1);
+            this.panel1.Controls.Add(this.lblTimeCounter1);
+            this.panel1.Controls.Add(this.lblTimeIn1);
+            this.panel1.Controls.Add(this.btnStop1);
+            this.panel1.Controls.Add(this.btnStart1);
+            this.panel1.Controls.Add(this.label324321);
+            this.panel1.Controls.Add(this.label43241);
             this.panel1.Controls.Add(this.lblDurationOfTime);
-            this.panel1.Controls.Add(this.lblTimeIn);
+            this.panel1.Controls.Add(this.label432);
             this.panel1.Controls.Add(this.tbPlayerName);
             this.panel1.Controls.Add(this.lblPlayerName);
-            this.panel1.Controls.Add(this.lblTableStatus);
+            this.panel1.Controls.Add(this.lblTableStatus1);
             this.panel1.Controls.Add(this.lblTable1);
+            this.panel1.Controls.Add(this.btnPause1);
             this.panel1.Location = new System.Drawing.Point(25, 87);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(216, 256);
             this.panel1.TabIndex = 1;
             // 
-            // button2
+            // mtbDuration
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(117, 89);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 30);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Stop";
-            this.button2.UseVisualStyleBackColor = false;
+            this.mtbDuration.CausesValidation = false;
+            this.mtbDuration.Location = new System.Drawing.Point(139, 164);
+            this.mtbDuration.Mask = "99:\\0\\0";
+            this.mtbDuration.Name = "mtbDuration";
+            this.mtbDuration.Size = new System.Drawing.Size(59, 22);
+            this.mtbDuration.TabIndex = 28;
+            this.mtbDuration.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // button1
+            // lblThePrice1
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(23, 89);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 30);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Start";
-            this.button1.UseVisualStyleBackColor = false;
+            this.lblThePrice1.AutoSize = true;
+            this.lblThePrice1.Location = new System.Drawing.Point(91, 225);
+            this.lblThePrice1.Name = "lblThePrice1";
+            this.lblThePrice1.Size = new System.Drawing.Size(69, 17);
+            this.lblThePrice1.TabIndex = 27;
+            this.lblThePrice1.Text = "DateTime";
             // 
-            // lblPrice
+            // lblTimeCounter1
             // 
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(8, 225);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(77, 17);
-            this.lblPrice.TabIndex = 10;
-            this.lblPrice.Text = "The Price :";
+            this.lblTimeCounter1.AutoSize = true;
+            this.lblTimeCounter1.Location = new System.Drawing.Point(114, 196);
+            this.lblTimeCounter1.Name = "lblTimeCounter1";
+            this.lblTimeCounter1.Size = new System.Drawing.Size(69, 17);
+            this.lblTimeCounter1.TabIndex = 26;
+            this.lblTimeCounter1.Text = "DateTime";
             // 
-            // lblTimeCounter
+            // lblTimeIn1
             // 
-            this.lblTimeCounter.AutoSize = true;
-            this.lblTimeCounter.Location = new System.Drawing.Point(8, 196);
-            this.lblTimeCounter.Name = "lblTimeCounter";
-            this.lblTimeCounter.Size = new System.Drawing.Size(101, 17);
-            this.lblTimeCounter.TabIndex = 9;
-            this.lblTimeCounter.Text = "Time Counter :";
+            this.lblTimeIn1.AutoSize = true;
+            this.lblTimeIn1.Location = new System.Drawing.Point(76, 138);
+            this.lblTimeIn1.Name = "lblTimeIn1";
+            this.lblTimeIn1.Size = new System.Drawing.Size(69, 17);
+            this.lblTimeIn1.TabIndex = 24;
+            this.lblTimeIn1.Text = "DateTime";
+            // 
+            // btnStop1
+            // 
+            this.btnStop1.BackColor = System.Drawing.Color.White;
+            this.btnStop1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnStop1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnStop1.Location = new System.Drawing.Point(117, 89);
+            this.btnStop1.Name = "btnStop1";
+            this.btnStop1.Size = new System.Drawing.Size(75, 30);
+            this.btnStop1.TabIndex = 12;
+            this.btnStop1.Text = "Stop";
+            this.btnStop1.UseVisualStyleBackColor = false;
+            // 
+            // btnStart1
+            // 
+            this.btnStart1.BackColor = System.Drawing.Color.White;
+            this.btnStart1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnStart1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnStart1.Location = new System.Drawing.Point(23, 89);
+            this.btnStart1.Name = "btnStart1";
+            this.btnStart1.Size = new System.Drawing.Size(75, 30);
+            this.btnStart1.TabIndex = 11;
+            this.btnStart1.Text = "Start";
+            this.btnStart1.UseVisualStyleBackColor = false;
+            this.btnStart1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label324321
+            // 
+            this.label324321.AutoSize = true;
+            this.label324321.Location = new System.Drawing.Point(8, 225);
+            this.label324321.Name = "label324321";
+            this.label324321.Size = new System.Drawing.Size(77, 17);
+            this.label324321.TabIndex = 10;
+            this.label324321.Text = "The Price :";
+            // 
+            // label43241
+            // 
+            this.label43241.AutoSize = true;
+            this.label43241.Location = new System.Drawing.Point(8, 196);
+            this.label43241.Name = "label43241";
+            this.label43241.Size = new System.Drawing.Size(101, 17);
+            this.label43241.TabIndex = 9;
+            this.label43241.Text = "Time Counter :";
             // 
             // lblDurationOfTime
             // 
@@ -214,18 +265,18 @@
             this.lblDurationOfTime.TabIndex = 8;
             this.lblDurationOfTime.Text = "Duration Of Time :";
             // 
-            // lblTimeIn
+            // label432
             // 
-            this.lblTimeIn.AutoSize = true;
-            this.lblTimeIn.Location = new System.Drawing.Point(8, 138);
-            this.lblTimeIn.Name = "lblTimeIn";
-            this.lblTimeIn.Size = new System.Drawing.Size(62, 17);
-            this.lblTimeIn.TabIndex = 7;
-            this.lblTimeIn.Text = "Time In :";
+            this.label432.AutoSize = true;
+            this.label432.Location = new System.Drawing.Point(8, 138);
+            this.label432.Name = "label432";
+            this.label432.Size = new System.Drawing.Size(62, 17);
+            this.label432.TabIndex = 7;
+            this.label432.Text = "Time In :";
             // 
             // tbPlayerName
             // 
-            this.tbPlayerName.Location = new System.Drawing.Point(113, 50);
+            this.tbPlayerName.Location = new System.Drawing.Point(109, 50);
             this.tbPlayerName.Name = "tbPlayerName";
             this.tbPlayerName.Size = new System.Drawing.Size(100, 22);
             this.tbPlayerName.TabIndex = 4;
@@ -239,17 +290,17 @@
             this.lblPlayerName.TabIndex = 3;
             this.lblPlayerName.Text = "Player Name : ";
             // 
-            // lblTableStatus
+            // lblTableStatus1
             // 
-            this.lblTableStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblTableStatus.AutoSize = true;
-            this.lblTableStatus.BackColor = System.Drawing.Color.Lime;
-            this.lblTableStatus.Location = new System.Drawing.Point(0, 20);
-            this.lblTableStatus.Name = "lblTableStatus";
-            this.lblTableStatus.Padding = new System.Windows.Forms.Padding(89, 0, 90, 0);
-            this.lblTableStatus.Size = new System.Drawing.Size(216, 17);
-            this.lblTableStatus.TabIndex = 2;
-            this.lblTableStatus.Text = "Free";
+            this.lblTableStatus1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTableStatus1.BackColor = System.Drawing.Color.Lime;
+            this.lblTableStatus1.Location = new System.Drawing.Point(-32, 20);
+            this.lblTableStatus1.Name = "lblTableStatus1";
+            this.lblTableStatus1.Padding = new System.Windows.Forms.Padding(89, 0, 90, 0);
+            this.lblTableStatus1.Size = new System.Drawing.Size(281, 17);
+            this.lblTableStatus1.TabIndex = 2;
+            this.lblTableStatus1.Text = "playing";
+            this.lblTableStatus1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTable1
             // 
@@ -285,8 +336,8 @@
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.lblTableStatus2);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label8);
             this.panel2.Location = new System.Drawing.Point(269, 87);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(216, 256);
@@ -368,29 +419,28 @@
             this.label6.TabIndex = 3;
             this.label6.Text = "Player Name : ";
             // 
+            // lblTableStatus2
+            // 
+            this.lblTableStatus2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTableStatus2.BackColor = System.Drawing.Color.Lime;
+            this.lblTableStatus2.Location = new System.Drawing.Point(0, 20);
+            this.lblTableStatus2.Name = "lblTableStatus2";
+            this.lblTableStatus2.Padding = new System.Windows.Forms.Padding(89, 0, 90, 0);
+            this.lblTableStatus2.Size = new System.Drawing.Size(281, 17);
+            this.lblTableStatus2.TabIndex = 2;
+            this.lblTableStatus2.Text = "Free";
+            // 
             // label7
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Lime;
-            this.label7.Location = new System.Drawing.Point(0, 20);
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label7.Location = new System.Drawing.Point(0, 0);
             this.label7.Name = "label7";
-            this.label7.Padding = new System.Windows.Forms.Padding(89, 0, 90, 0);
+            this.label7.Padding = new System.Windows.Forms.Padding(80, 0, 80, 0);
             this.label7.Size = new System.Drawing.Size(216, 17);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Free";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label8.Location = new System.Drawing.Point(0, 0);
-            this.label8.Name = "label8";
-            this.label8.Padding = new System.Windows.Forms.Padding(80, 0, 80, 0);
-            this.label8.Size = new System.Drawing.Size(216, 17);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Table 1";
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Table 2";
             // 
             // panel3
             // 
@@ -403,7 +453,7 @@
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.textBox2);
             this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.label14);
+            this.panel3.Controls.Add(this.lblTableStatus3);
             this.panel3.Controls.Add(this.label15);
             this.panel3.Location = new System.Drawing.Point(513, 87);
             this.panel3.Name = "panel3";
@@ -486,17 +536,17 @@
             this.label13.TabIndex = 3;
             this.label13.Text = "Player Name : ";
             // 
-            // label14
+            // lblTableStatus3
             // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Lime;
-            this.label14.Location = new System.Drawing.Point(0, 20);
-            this.label14.Name = "label14";
-            this.label14.Padding = new System.Windows.Forms.Padding(89, 0, 90, 0);
-            this.label14.Size = new System.Drawing.Size(216, 17);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "Free";
+            this.lblTableStatus3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTableStatus3.AutoSize = true;
+            this.lblTableStatus3.BackColor = System.Drawing.Color.Lime;
+            this.lblTableStatus3.Location = new System.Drawing.Point(0, 20);
+            this.lblTableStatus3.Name = "lblTableStatus3";
+            this.lblTableStatus3.Padding = new System.Windows.Forms.Padding(89, 0, 90, 0);
+            this.lblTableStatus3.Size = new System.Drawing.Size(216, 17);
+            this.lblTableStatus3.TabIndex = 2;
+            this.lblTableStatus3.Text = "Free";
             // 
             // label15
             // 
@@ -508,7 +558,7 @@
             this.label15.Padding = new System.Windows.Forms.Padding(80, 0, 80, 0);
             this.label15.Size = new System.Drawing.Size(216, 17);
             this.label15.TabIndex = 0;
-            this.label15.Text = "Table 1";
+            this.label15.Text = "Table 3";
             // 
             // panel4
             // 
@@ -521,7 +571,7 @@
             this.panel4.Controls.Add(this.label19);
             this.panel4.Controls.Add(this.textBox3);
             this.panel4.Controls.Add(this.label20);
-            this.panel4.Controls.Add(this.label21);
+            this.panel4.Controls.Add(this.lblTableStatus4);
             this.panel4.Controls.Add(this.label22);
             this.panel4.Location = new System.Drawing.Point(759, 87);
             this.panel4.Name = "panel4";
@@ -604,17 +654,17 @@
             this.label20.TabIndex = 3;
             this.label20.Text = "Player Name : ";
             // 
-            // label21
+            // lblTableStatus4
             // 
-            this.label21.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Lime;
-            this.label21.Location = new System.Drawing.Point(0, 20);
-            this.label21.Name = "label21";
-            this.label21.Padding = new System.Windows.Forms.Padding(89, 0, 90, 0);
-            this.label21.Size = new System.Drawing.Size(216, 17);
-            this.label21.TabIndex = 2;
-            this.label21.Text = "Free";
+            this.lblTableStatus4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTableStatus4.AutoSize = true;
+            this.lblTableStatus4.BackColor = System.Drawing.Color.Lime;
+            this.lblTableStatus4.Location = new System.Drawing.Point(0, 20);
+            this.lblTableStatus4.Name = "lblTableStatus4";
+            this.lblTableStatus4.Padding = new System.Windows.Forms.Padding(89, 0, 90, 0);
+            this.lblTableStatus4.Size = new System.Drawing.Size(216, 17);
+            this.lblTableStatus4.TabIndex = 2;
+            this.lblTableStatus4.Text = "Free";
             // 
             // label22
             // 
@@ -626,42 +676,142 @@
             this.label22.Padding = new System.Windows.Forms.Padding(80, 0, 80, 0);
             this.label22.Size = new System.Drawing.Size(216, 17);
             this.label22.TabIndex = 0;
-            this.label22.Text = "Table 1";
+            this.label22.Text = "Table 4";
             // 
-            // panel5
+            // panelX
             // 
-            this.panel5.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel5.Controls.Add(this.lblTime);
-            this.panel5.Controls.Add(this.label29);
-            this.panel5.Controls.Add(this.lblDate);
-            this.panel5.Controls.Add(this.label28);
-            this.panel5.Controls.Add(this.label24);
-            this.panel5.Controls.Add(this.label23);
-            this.panel5.Controls.Add(this.label25);
-            this.panel5.Controls.Add(this.label26);
-            this.panel5.Controls.Add(this.label27);
-            this.panel5.Location = new System.Drawing.Point(759, 367);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(216, 256);
-            this.panel5.TabIndex = 19;
+            this.panelX.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelX.Controls.Add(this.lblTime);
+            this.panelX.Controls.Add(this.label29);
+            this.panelX.Controls.Add(this.lblDate);
+            this.panelX.Controls.Add(this.label28);
+            this.panelX.Controls.Add(this.label24);
+            this.panelX.Controls.Add(this.label23);
+            this.panelX.Controls.Add(this.label25);
+            this.panelX.Controls.Add(this.label26);
+            this.panelX.Controls.Add(this.label27);
+            this.panelX.Location = new System.Drawing.Point(759, 367);
+            this.panelX.Name = "panelX";
+            this.panelX.Size = new System.Drawing.Size(216, 256);
+            this.panelX.TabIndex = 19;
             // 
-            // panel6
+            // lblTime
             // 
-            this.panel6.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel6.Controls.Add(this.button11);
-            this.panel6.Controls.Add(this.button12);
-            this.panel6.Controls.Add(this.label30);
-            this.panel6.Controls.Add(this.label31);
-            this.panel6.Controls.Add(this.label32);
-            this.panel6.Controls.Add(this.label33);
-            this.panel6.Controls.Add(this.textBox5);
-            this.panel6.Controls.Add(this.label34);
-            this.panel6.Controls.Add(this.label35);
-            this.panel6.Controls.Add(this.label36);
-            this.panel6.Location = new System.Drawing.Point(513, 367);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(216, 256);
-            this.panel6.TabIndex = 18;
+            this.lblTime.AutoSize = true;
+            this.lblTime.Location = new System.Drawing.Point(72, 89);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(69, 17);
+            this.lblTime.TabIndex = 23;
+            this.lblTime.Text = "DateTime";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.BackColor = System.Drawing.Color.Transparent;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label29.Location = new System.Drawing.Point(14, 58);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(52, 17);
+            this.label29.TabIndex = 22;
+            this.label29.Text = "Date :";
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Location = new System.Drawing.Point(72, 58);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(69, 17);
+            this.lblDate.TabIndex = 21;
+            this.lblDate.Text = "DateTime";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.BackColor = System.Drawing.Color.Transparent;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label28.Location = new System.Drawing.Point(14, 213);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(126, 17);
+            this.label28.TabIndex = 17;
+            this.label28.Text = "Earned Income :";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label24.Location = new System.Drawing.Point(14, 182);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(181, 17);
+            this.label24.TabIndex = 16;
+            this.label24.Text = "Total Customers Today:";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(9, 12);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(135, 29);
+            this.label23.TabIndex = 13;
+            this.label23.Text = "Summary :";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label25.Location = new System.Drawing.Point(14, 151);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(138, 17);
+            this.label25.TabIndex = 15;
+            this.label25.Text = "Available Tables :";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.Color.Transparent;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label26.Location = new System.Drawing.Point(14, 120);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(136, 17);
+            this.label26.TabIndex = 14;
+            this.label26.Text = "Reserved Tables:";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.Color.Transparent;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label27.Location = new System.Drawing.Point(14, 89);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(53, 17);
+            this.label27.TabIndex = 13;
+            this.label27.Text = "Time :";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel7.Controls.Add(this.button11);
+            this.panel7.Controls.Add(this.button12);
+            this.panel7.Controls.Add(this.label30);
+            this.panel7.Controls.Add(this.label31);
+            this.panel7.Controls.Add(this.label32);
+            this.panel7.Controls.Add(this.label33);
+            this.panel7.Controls.Add(this.textBox5);
+            this.panel7.Controls.Add(this.label34);
+            this.panel7.Controls.Add(this.lblTableStatus7);
+            this.panel7.Controls.Add(this.label36);
+            this.panel7.Location = new System.Drawing.Point(513, 367);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(216, 256);
+            this.panel7.TabIndex = 18;
             // 
             // button11
             // 
@@ -739,17 +889,17 @@
             this.label34.TabIndex = 3;
             this.label34.Text = "Player Name : ";
             // 
-            // label35
+            // lblTableStatus7
             // 
-            this.label35.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label35.AutoSize = true;
-            this.label35.BackColor = System.Drawing.Color.Lime;
-            this.label35.Location = new System.Drawing.Point(0, 20);
-            this.label35.Name = "label35";
-            this.label35.Padding = new System.Windows.Forms.Padding(89, 0, 90, 0);
-            this.label35.Size = new System.Drawing.Size(216, 17);
-            this.label35.TabIndex = 2;
-            this.label35.Text = "Free";
+            this.lblTableStatus7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTableStatus7.AutoSize = true;
+            this.lblTableStatus7.BackColor = System.Drawing.Color.Lime;
+            this.lblTableStatus7.Location = new System.Drawing.Point(0, 20);
+            this.lblTableStatus7.Name = "lblTableStatus7";
+            this.lblTableStatus7.Padding = new System.Windows.Forms.Padding(89, 0, 90, 0);
+            this.lblTableStatus7.Size = new System.Drawing.Size(216, 17);
+            this.lblTableStatus7.TabIndex = 2;
+            this.lblTableStatus7.Text = "Free";
             // 
             // label36
             // 
@@ -761,25 +911,25 @@
             this.label36.Padding = new System.Windows.Forms.Padding(80, 0, 80, 0);
             this.label36.Size = new System.Drawing.Size(216, 17);
             this.label36.TabIndex = 0;
-            this.label36.Text = "Table 1";
+            this.label36.Text = "Table 7";
             // 
-            // panel7
+            // panel6
             // 
-            this.panel7.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel7.Controls.Add(this.button13);
-            this.panel7.Controls.Add(this.button14);
-            this.panel7.Controls.Add(this.label37);
-            this.panel7.Controls.Add(this.label38);
-            this.panel7.Controls.Add(this.label39);
-            this.panel7.Controls.Add(this.label40);
-            this.panel7.Controls.Add(this.textBox6);
-            this.panel7.Controls.Add(this.label41);
-            this.panel7.Controls.Add(this.label42);
-            this.panel7.Controls.Add(this.label43);
-            this.panel7.Location = new System.Drawing.Point(269, 367);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(216, 256);
-            this.panel7.TabIndex = 17;
+            this.panel6.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel6.Controls.Add(this.button13);
+            this.panel6.Controls.Add(this.button14);
+            this.panel6.Controls.Add(this.label37);
+            this.panel6.Controls.Add(this.label38);
+            this.panel6.Controls.Add(this.label39);
+            this.panel6.Controls.Add(this.label40);
+            this.panel6.Controls.Add(this.textBox6);
+            this.panel6.Controls.Add(this.label41);
+            this.panel6.Controls.Add(this.lblTableStatus6);
+            this.panel6.Controls.Add(this.label43);
+            this.panel6.Location = new System.Drawing.Point(269, 367);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(216, 256);
+            this.panel6.TabIndex = 17;
             // 
             // button13
             // 
@@ -857,17 +1007,17 @@
             this.label41.TabIndex = 3;
             this.label41.Text = "Player Name : ";
             // 
-            // label42
+            // lblTableStatus6
             // 
-            this.label42.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label42.AutoSize = true;
-            this.label42.BackColor = System.Drawing.Color.Lime;
-            this.label42.Location = new System.Drawing.Point(0, 20);
-            this.label42.Name = "label42";
-            this.label42.Padding = new System.Windows.Forms.Padding(89, 0, 90, 0);
-            this.label42.Size = new System.Drawing.Size(216, 17);
-            this.label42.TabIndex = 2;
-            this.label42.Text = "Free";
+            this.lblTableStatus6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTableStatus6.AutoSize = true;
+            this.lblTableStatus6.BackColor = System.Drawing.Color.Lime;
+            this.lblTableStatus6.Location = new System.Drawing.Point(0, 20);
+            this.lblTableStatus6.Name = "lblTableStatus6";
+            this.lblTableStatus6.Padding = new System.Windows.Forms.Padding(89, 0, 90, 0);
+            this.lblTableStatus6.Size = new System.Drawing.Size(216, 17);
+            this.lblTableStatus6.TabIndex = 2;
+            this.lblTableStatus6.Text = "Free";
             // 
             // label43
             // 
@@ -879,25 +1029,25 @@
             this.label43.Padding = new System.Windows.Forms.Padding(80, 0, 80, 0);
             this.label43.Size = new System.Drawing.Size(216, 17);
             this.label43.TabIndex = 0;
-            this.label43.Text = "Table 1";
+            this.label43.Text = "Table 6";
             // 
-            // panel8
+            // panel5
             // 
-            this.panel8.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel8.Controls.Add(this.button15);
-            this.panel8.Controls.Add(this.button16);
-            this.panel8.Controls.Add(this.label44);
-            this.panel8.Controls.Add(this.label45);
-            this.panel8.Controls.Add(this.label46);
-            this.panel8.Controls.Add(this.label47);
-            this.panel8.Controls.Add(this.textBox7);
-            this.panel8.Controls.Add(this.label48);
-            this.panel8.Controls.Add(this.label49);
-            this.panel8.Controls.Add(this.label50);
-            this.panel8.Location = new System.Drawing.Point(25, 367);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(216, 256);
-            this.panel8.TabIndex = 16;
+            this.panel5.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel5.Controls.Add(this.button15);
+            this.panel5.Controls.Add(this.button16);
+            this.panel5.Controls.Add(this.label44);
+            this.panel5.Controls.Add(this.label45);
+            this.panel5.Controls.Add(this.label46);
+            this.panel5.Controls.Add(this.label47);
+            this.panel5.Controls.Add(this.textBox7);
+            this.panel5.Controls.Add(this.label48);
+            this.panel5.Controls.Add(this.lblTableStatus5);
+            this.panel5.Controls.Add(this.label50);
+            this.panel5.Location = new System.Drawing.Point(25, 367);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(216, 256);
+            this.panel5.TabIndex = 16;
             // 
             // button15
             // 
@@ -975,17 +1125,17 @@
             this.label48.TabIndex = 3;
             this.label48.Text = "Player Name : ";
             // 
-            // label49
+            // lblTableStatus5
             // 
-            this.label49.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label49.AutoSize = true;
-            this.label49.BackColor = System.Drawing.Color.Lime;
-            this.label49.Location = new System.Drawing.Point(0, 20);
-            this.label49.Name = "label49";
-            this.label49.Padding = new System.Windows.Forms.Padding(89, 0, 90, 0);
-            this.label49.Size = new System.Drawing.Size(216, 17);
-            this.label49.TabIndex = 2;
-            this.label49.Text = "Free";
+            this.lblTableStatus5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTableStatus5.AutoSize = true;
+            this.lblTableStatus5.BackColor = System.Drawing.Color.Lime;
+            this.lblTableStatus5.Location = new System.Drawing.Point(0, 20);
+            this.lblTableStatus5.Name = "lblTableStatus5";
+            this.lblTableStatus5.Padding = new System.Windows.Forms.Padding(89, 0, 90, 0);
+            this.lblTableStatus5.Size = new System.Drawing.Size(216, 17);
+            this.lblTableStatus5.TabIndex = 2;
+            this.lblTableStatus5.Text = "Free";
             // 
             // label50
             // 
@@ -997,7 +1147,7 @@
             this.label50.Padding = new System.Windows.Forms.Padding(80, 0, 80, 0);
             this.label50.Size = new System.Drawing.Size(216, 17);
             this.label50.TabIndex = 0;
-            this.label50.Text = "Table 1";
+            this.label50.Text = "Table 5";
             // 
             // rbDark
             // 
@@ -1030,121 +1180,64 @@
             this.radioButton1.Text = "Light";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // lblDate
+            // nudHourlyPrice
             // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(78, 58);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(69, 17);
-            this.lblDate.TabIndex = 21;
-            this.lblDate.Text = "DateTime";
+            this.nudHourlyPrice.DecimalPlaces = 2;
+            this.nudHourlyPrice.Location = new System.Drawing.Point(869, 51);
+            this.nudHourlyPrice.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudHourlyPrice.Name = "nudHourlyPrice";
+            this.nudHourlyPrice.Size = new System.Drawing.Size(71, 22);
+            this.nudHourlyPrice.TabIndex = 29;
+            this.nudHourlyPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudHourlyPrice.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // label23
+            // lblHourlyPrice
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(9, 12);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(135, 29);
-            this.label23.TabIndex = 13;
-            this.label23.Text = "Summary :";
+            this.lblHourlyPrice.AutoSize = true;
+            this.lblHourlyPrice.Location = new System.Drawing.Point(759, 53);
+            this.lblHourlyPrice.Name = "lblHourlyPrice";
+            this.lblHourlyPrice.Size = new System.Drawing.Size(107, 17);
+            this.lblHourlyPrice.TabIndex = 30;
+            this.lblHourlyPrice.Text = "Hourly Price ($)";
             // 
-            // label24
+            // btnPause1
             // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label24.Location = new System.Drawing.Point(20, 182);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(88, 17);
-            this.label24.TabIndex = 16;
-            this.label24.Text = "The Price :";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label25.Location = new System.Drawing.Point(20, 151);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(115, 17);
-            this.label25.TabIndex = 15;
-            this.label25.Text = "Time Counter :";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.Transparent;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label26.Location = new System.Drawing.Point(20, 120);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(142, 17);
-            this.label26.TabIndex = 14;
-            this.label26.Text = "Duration Of Time :";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label27.Location = new System.Drawing.Point(20, 89);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(53, 17);
-            this.label27.TabIndex = 13;
-            this.label27.Text = "Time :";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.BackColor = System.Drawing.Color.Transparent;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label28.Location = new System.Drawing.Point(20, 213);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(88, 17);
-            this.label28.TabIndex = 17;
-            this.label28.Text = "The Price :";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.BackColor = System.Drawing.Color.Transparent;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label29.Location = new System.Drawing.Point(20, 58);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(52, 17);
-            this.label29.TabIndex = 22;
-            this.label29.Text = "Date :";
-            // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.Location = new System.Drawing.Point(78, 89);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(69, 17);
-            this.lblTime.TabIndex = 23;
-            this.lblTime.Text = "DateTime";
+            this.btnPause1.BackColor = System.Drawing.Color.White;
+            this.btnPause1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPause1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnPause1.Location = new System.Drawing.Point(23, 89);
+            this.btnPause1.Name = "btnPause1";
+            this.btnPause1.Size = new System.Drawing.Size(75, 30);
+            this.btnPause1.TabIndex = 29;
+            this.btnPause1.Text = "Pause";
+            this.btnPause1.UseVisualStyleBackColor = false;
+            this.btnPause1.Visible = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1001, 642);
+            this.ClientSize = new System.Drawing.Size(1001, 670);
+            this.Controls.Add(this.lblHourlyPrice);
+            this.Controls.Add(this.nudHourlyPrice);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.rbDark);
             this.Controls.Add(this.lblTheme);
-            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panelX);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnQuit);
@@ -1152,7 +1245,6 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -1161,14 +1253,15 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            this.panelX.ResumeLayout(false);
+            this.panelX.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHourlyPrice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1179,15 +1272,15 @@
         private System.Windows.Forms.Button btnQuit;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblTable1;
-        private System.Windows.Forms.Label lblTableStatus;
+        private System.Windows.Forms.Label lblTableStatus1;
         private System.Windows.Forms.TextBox tbPlayerName;
         private System.Windows.Forms.Label lblPlayerName;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label lblPrice;
-        private System.Windows.Forms.Label lblTimeCounter;
+        private System.Windows.Forms.Button btnStop1;
+        private System.Windows.Forms.Button btnStart1;
+        private System.Windows.Forms.Label label324321;
+        private System.Windows.Forms.Label label43241;
         private System.Windows.Forms.Label lblDurationOfTime;
-        private System.Windows.Forms.Label lblTimeIn;
+        private System.Windows.Forms.Label label432;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button3;
@@ -1198,8 +1291,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblTableStatus2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
@@ -1209,7 +1302,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblTableStatus3;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button7;
@@ -1220,10 +1313,10 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label lblTableStatus4;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panelX;
+        private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Label label30;
@@ -1232,9 +1325,9 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label lblTableStatus7;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Label label37;
@@ -1243,9 +1336,9 @@
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label lblTableStatus6;
         private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Label label44;
@@ -1254,7 +1347,7 @@
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label lblTableStatus5;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.RadioButton rbDark;
         private System.Windows.Forms.Label lblTheme;
@@ -1268,6 +1361,13 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.MaskedTextBox mtbDuration;
+        private System.Windows.Forms.Label lblThePrice1;
+        private System.Windows.Forms.Label lblTimeCounter1;
+        private System.Windows.Forms.Label lblTimeIn1;
+        private System.Windows.Forms.NumericUpDown nudHourlyPrice;
+        private System.Windows.Forms.Label lblHourlyPrice;
+        private System.Windows.Forms.Button btnPause1;
     }
 }
 
