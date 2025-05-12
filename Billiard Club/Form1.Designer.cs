@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnQuit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.mtbDuration = new System.Windows.Forms.MaskedTextBox();
+            this.mtbDuration1 = new System.Windows.Forms.MaskedTextBox();
             this.lblThePrice1 = new System.Windows.Forms.Label();
             this.lblTimeCounter1 = new System.Windows.Forms.Label();
             this.lblTimeIn1 = new System.Windows.Forms.Label();
@@ -40,10 +41,11 @@
             this.label43241 = new System.Windows.Forms.Label();
             this.lblDurationOfTime = new System.Windows.Forms.Label();
             this.label432 = new System.Windows.Forms.Label();
-            this.tbPlayerName = new System.Windows.Forms.TextBox();
+            this.tbPlayerName1 = new System.Windows.Forms.TextBox();
             this.lblPlayerName = new System.Windows.Forms.Label();
             this.lblTableStatus1 = new System.Windows.Forms.Label();
             this.lblTable1 = new System.Windows.Forms.Label();
+            this.btnPause1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
@@ -121,12 +123,12 @@
             this.label48 = new System.Windows.Forms.Label();
             this.lblTableStatus5 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
-            this.rbDark = new System.Windows.Forms.RadioButton();
             this.lblTheme = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rbLight = new System.Windows.Forms.RadioButton();
             this.nudHourlyPrice = new System.Windows.Forms.NumericUpDown();
             this.lblHourlyPrice = new System.Windows.Forms.Label();
-            this.btnPause1 = new System.Windows.Forms.Button();
+            this.rbDark = new System.Windows.Forms.RadioButton();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -156,7 +158,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel1.Controls.Add(this.mtbDuration);
+            this.panel1.Controls.Add(this.mtbDuration1);
             this.panel1.Controls.Add(this.lblThePrice1);
             this.panel1.Controls.Add(this.lblTimeCounter1);
             this.panel1.Controls.Add(this.lblTimeIn1);
@@ -166,7 +168,7 @@
             this.panel1.Controls.Add(this.label43241);
             this.panel1.Controls.Add(this.lblDurationOfTime);
             this.panel1.Controls.Add(this.label432);
-            this.panel1.Controls.Add(this.tbPlayerName);
+            this.panel1.Controls.Add(this.tbPlayerName1);
             this.panel1.Controls.Add(this.lblPlayerName);
             this.panel1.Controls.Add(this.lblTableStatus1);
             this.panel1.Controls.Add(this.lblTable1);
@@ -176,15 +178,15 @@
             this.panel1.Size = new System.Drawing.Size(216, 256);
             this.panel1.TabIndex = 1;
             // 
-            // mtbDuration
+            // mtbDuration1
             // 
-            this.mtbDuration.CausesValidation = false;
-            this.mtbDuration.Location = new System.Drawing.Point(139, 164);
-            this.mtbDuration.Mask = "99:\\0\\0";
-            this.mtbDuration.Name = "mtbDuration";
-            this.mtbDuration.Size = new System.Drawing.Size(59, 22);
-            this.mtbDuration.TabIndex = 28;
-            this.mtbDuration.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mtbDuration1.CausesValidation = false;
+            this.mtbDuration1.Location = new System.Drawing.Point(139, 164);
+            this.mtbDuration1.Mask = "99:\\0\\0";
+            this.mtbDuration1.Name = "mtbDuration1";
+            this.mtbDuration1.Size = new System.Drawing.Size(59, 22);
+            this.mtbDuration1.TabIndex = 28;
+            this.mtbDuration1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblThePrice1
             // 
@@ -236,7 +238,7 @@
             this.btnStart1.TabIndex = 11;
             this.btnStart1.Text = "Start";
             this.btnStart1.UseVisualStyleBackColor = false;
-            this.btnStart1.Click += new System.EventHandler(this.button1_Click);
+            this.btnStart1.Click += new System.EventHandler(this.btnStart1_Click);
             // 
             // label324321
             // 
@@ -274,12 +276,12 @@
             this.label432.TabIndex = 7;
             this.label432.Text = "Time In :";
             // 
-            // tbPlayerName
+            // tbPlayerName1
             // 
-            this.tbPlayerName.Location = new System.Drawing.Point(109, 50);
-            this.tbPlayerName.Name = "tbPlayerName";
-            this.tbPlayerName.Size = new System.Drawing.Size(100, 22);
-            this.tbPlayerName.TabIndex = 4;
+            this.tbPlayerName1.Location = new System.Drawing.Point(109, 50);
+            this.tbPlayerName1.Name = "tbPlayerName1";
+            this.tbPlayerName1.Size = new System.Drawing.Size(100, 22);
+            this.tbPlayerName1.TabIndex = 4;
             // 
             // lblPlayerName
             // 
@@ -313,6 +315,19 @@
             this.lblTable1.Size = new System.Drawing.Size(216, 17);
             this.lblTable1.TabIndex = 0;
             this.lblTable1.Text = "Table 1";
+            // 
+            // btnPause1
+            // 
+            this.btnPause1.BackColor = System.Drawing.Color.White;
+            this.btnPause1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPause1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnPause1.Location = new System.Drawing.Point(23, 89);
+            this.btnPause1.Name = "btnPause1";
+            this.btnPause1.Size = new System.Drawing.Size(75, 30);
+            this.btnPause1.TabIndex = 29;
+            this.btnPause1.Text = "Pause";
+            this.btnPause1.UseVisualStyleBackColor = false;
+            this.btnPause1.Visible = false;
             // 
             // label1
             // 
@@ -1149,17 +1164,6 @@
             this.label50.TabIndex = 0;
             this.label50.Text = "Table 5";
             // 
-            // rbDark
-            // 
-            this.rbDark.AutoSize = true;
-            this.rbDark.Location = new System.Drawing.Point(85, 42);
-            this.rbDark.Name = "rbDark";
-            this.rbDark.Size = new System.Drawing.Size(59, 21);
-            this.rbDark.TabIndex = 13;
-            this.rbDark.TabStop = true;
-            this.rbDark.Text = "Dark";
-            this.rbDark.UseVisualStyleBackColor = true;
-            // 
             // lblTheme
             // 
             this.lblTheme.AutoSize = true;
@@ -1169,16 +1173,17 @@
             this.lblTheme.TabIndex = 14;
             this.lblTheme.Text = "Theme:";
             // 
-            // radioButton1
+            // rbLight
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(150, 42);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(60, 21);
-            this.radioButton1.TabIndex = 20;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Light";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbLight.AutoSize = true;
+            this.rbLight.Checked = true;
+            this.rbLight.Location = new System.Drawing.Point(85, 42);
+            this.rbLight.Name = "rbLight";
+            this.rbLight.Size = new System.Drawing.Size(60, 21);
+            this.rbLight.TabIndex = 20;
+            this.rbLight.TabStop = true;
+            this.rbLight.Text = "Light";
+            this.rbLight.UseVisualStyleBackColor = true;
             // 
             // nudHourlyPrice
             // 
@@ -1208,18 +1213,21 @@
             this.lblHourlyPrice.TabIndex = 30;
             this.lblHourlyPrice.Text = "Hourly Price ($)";
             // 
-            // btnPause1
+            // rbDark
             // 
-            this.btnPause1.BackColor = System.Drawing.Color.White;
-            this.btnPause1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPause1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnPause1.Location = new System.Drawing.Point(23, 89);
-            this.btnPause1.Name = "btnPause1";
-            this.btnPause1.Size = new System.Drawing.Size(75, 30);
-            this.btnPause1.TabIndex = 29;
-            this.btnPause1.Text = "Pause";
-            this.btnPause1.UseVisualStyleBackColor = false;
-            this.btnPause1.Visible = false;
+            this.rbDark.AutoSize = true;
+            this.rbDark.Location = new System.Drawing.Point(150, 42);
+            this.rbDark.Name = "rbDark";
+            this.rbDark.Size = new System.Drawing.Size(59, 21);
+            this.rbDark.TabIndex = 31;
+            this.rbDark.TabStop = true;
+            this.rbDark.Text = "Dark";
+            this.rbDark.UseVisualStyleBackColor = true;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -1228,8 +1236,6 @@
             this.ClientSize = new System.Drawing.Size(1001, 670);
             this.Controls.Add(this.lblHourlyPrice);
             this.Controls.Add(this.nudHourlyPrice);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.rbDark);
             this.Controls.Add(this.lblTheme);
             this.Controls.Add(this.panelX);
             this.Controls.Add(this.panel4);
@@ -1241,6 +1247,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnQuit);
+            this.Controls.Add(this.rbDark);
+            this.Controls.Add(this.rbLight);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1273,7 +1281,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblTable1;
         private System.Windows.Forms.Label lblTableStatus1;
-        private System.Windows.Forms.TextBox tbPlayerName;
+        private System.Windows.Forms.TextBox tbPlayerName1;
         private System.Windows.Forms.Label lblPlayerName;
         private System.Windows.Forms.Button btnStop1;
         private System.Windows.Forms.Button btnStart1;
@@ -1349,9 +1357,8 @@
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label lblTableStatus5;
         private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.RadioButton rbDark;
         private System.Windows.Forms.Label lblTheme;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbLight;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label24;
@@ -1361,13 +1368,15 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.MaskedTextBox mtbDuration;
+        private System.Windows.Forms.MaskedTextBox mtbDuration1;
         private System.Windows.Forms.Label lblThePrice1;
         private System.Windows.Forms.Label lblTimeCounter1;
         private System.Windows.Forms.Label lblTimeIn1;
         private System.Windows.Forms.NumericUpDown nudHourlyPrice;
         private System.Windows.Forms.Label lblHourlyPrice;
         private System.Windows.Forms.Button btnPause1;
+        private System.Windows.Forms.RadioButton rbDark;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
