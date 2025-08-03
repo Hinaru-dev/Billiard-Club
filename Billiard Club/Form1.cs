@@ -8,14 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+// now i need to test well then generalize everything to all tables instead of table1 only generalize
+
+
 namespace Billiard_Club
 {
     public partial class Form1 : Form
     {
         enum enTableID { Table1 = 2, Table2 = 4, Table3 = 8, Table4 = 16, Table5 = 32, Table6 = 64, Table7 = 128 };
+        enum enTableOp { Start = 0, Pause = 1, Continue = 2, Stop = 3 };
         const byte TotalTablesCount = 7;
-        byte startedTables;
-        byte pausedTables;
+        byte startedTables = 0;
+        byte pausedTables = 0;
 
         public Form1()
         {
@@ -31,14 +36,29 @@ namespace Billiard_Club
             Application.Exit();
         }
 
-        private void ChangeTableStatus(enTableID tableID)
+        private void ChangeTableStatus(enTableID tableID, enTableOp TableOp)
         {
             switch (tableID)
             {
                 case enTableID.Table1:
-                    lblTableStatus1.Text = "Playing";
-                    lblTableStatus1.TextAlign = ContentAlignment.MiddleCenter;
-                    lblTableStatus1.BackColor = Color.Yellow;
+                    if (TableOp == enTableOp.Start)
+                    {
+                        lblTableStatus1.Text = "Playing";
+                        lblTableStatus1.TextAlign = ContentAlignment.MiddleCenter;
+                        lblTableStatus1.BackColor = Color.Yellow;
+                    }
+                    else if (TableOp == enTableOp.Pause)
+                    {
+                        lblTableStatus1.Text = "Paused!";
+                        lblTableStatus1.TextAlign = ContentAlignment.MiddleCenter;
+                        lblTableStatus1.BackColor = Color.Orange;
+                    }
+                    else if (TableOp == enTableOp.Stop)
+                    {
+                        lblTableStatus1.Text = "Free";
+                        lblTableStatus1.TextAlign = ContentAlignment.MiddleCenter;
+                        lblTableStatus1.BackColor = Color.Lime;
+                    }
                     break;
                 //case enTableID.Table1:
                 //    lblTableStatus1.Text = "Playing";
@@ -201,10 +221,59 @@ namespace Billiard_Club
             }
         }
 
+        private void Pause(enTableID TableID)
+        {
+            if (btnPause1.Text == enTableOp.Pause.ToString())
+            {
+                ChangeTableStatus(TableID, enTableOp.Pause);
+
+                // add to paused tables if not already added
+                if ((pausedTables & (byte)TableID) == 0)
+                    pausedTables += (byte)TableID;
+
+                // terminating pause
+                btnPause1.Text = enTableOp.Continue.ToString();
+                btnPause1.TextAlign = ContentAlignment.MiddleCenter;
+            }
+
+            else
+            {
+                ChangeTableStatus(TableID, enTableOp.Start);
+
+                // remove from paused table
+                if ((pausedTables & (byte)TableID) != 0)
+                    pausedTables -= (byte)TableID;
+
+                // terminating pause
+                btnPause1.Text = enTableOp.Pause.ToString();
+                btnPause1.TextAlign = ContentAlignment.MiddleCenter;
+            }
+            
+        }
+
+        // ida dar stop lazm n'hidi pause btn w n'show start btn
+        private void Stop(enTableID TableID)
+        {
+            ChangeTableStatus(TableID, enTableOp.Stop);
+            
+            if ((startedTables & (byte)TableID) == (byte)TableID)
+                startedTables -= (byte)TableID;
+
+            SetThePrice(TableID);
+
+            if ((pausedTables & (byte)TableID) == (byte)TableID)
+                pausedTables -= (byte)TableID;
+
+            // need generalization instead of ujst table 1 buttons
+            // terminating start
+            btnPause1.Visible = false;
+            btnStart1.Visible = true;
+        }
+
         private void Start(enTableID TableID)
         {
             SetTimeIn(TableID);
-            ChangeTableStatus(TableID);
+            ChangeTableStatus(TableID, enTableOp.Start);
             InitializeTimeCounter(TableID);
             SetThePrice(TableID);
 
@@ -225,25 +294,6 @@ namespace Billiard_Club
                 return true;
 
             return false;
-        }
-
-        // btnStart(btn which_button_clicked) function
-
-        private void btnStart1_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(tbPlayerName1.Text.Trim()))
-            {
-                MessageBox.Show("Enter Name First, Please!", "Missing Player Name");
-                return;
-            }
-            
-            if (!isValidDuration(mtbDuration1))
-            {
-                MessageBox.Show("Set Valid Duration, Please!", "Invalid revservaion Duration");
-                return;
-            }
-
-            Start(enTableID.Table1);
         }
 
         private string formatTimeCounter(TimeSpan TimeCounter)
@@ -331,7 +381,9 @@ namespace Billiard_Club
             for (byte i = 1; i < TotalTablesCount; i++)
             {
                 byte TwoPowTableID = (byte)Math.Pow(2, i);
-                if ((startedTables & TwoPowTableID) == TwoPowTableID)
+
+                // table should be in started list but not in paused list
+                if ((startedTables & TwoPowTableID) == TwoPowTableID && (TwoPowTableID & pausedTables) != TwoPowTableID)
                 {
                     if (isDurationFinished((enTableID)TwoPowTableID))
                     {
@@ -339,6 +391,7 @@ namespace Billiard_Club
                         // i can perform a table stop 
                         // or show message box 
                         // or a notifyIcon
+                        Stop((enTableID)TwoPowTableID);
                         continue;
                     }
 
@@ -346,5 +399,35 @@ namespace Billiard_Club
                 }
             }
         }
+
+        // btnStart(btn which_button_clicked) function
+
+        private void btnStart1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(tbPlayerName1.Text.Trim()))
+            {
+                MessageBox.Show("Enter Name First, Please!", "Missing Player Name");
+                return;
+            }
+
+            if (!isValidDuration(mtbDuration1))
+            {
+                MessageBox.Show("Set Valid Duration, Please!", "Invalid revservaion Duration");
+                return;
+            }
+
+            Start(enTableID.Table1);
+        }
+        
+        private void btnPause1_Click(object sender, EventArgs e)
+        {
+            Pause(enTableID.Table1);
+        }
+
+        private void btnStop1_Click(object sender, EventArgs e)
+        {
+            Stop(enTableID.Table1);
+        }
+
     }
 }

@@ -163,7 +163,6 @@
             this.panel1.Controls.Add(this.lblTimeCounter1);
             this.panel1.Controls.Add(this.lblTimeIn1);
             this.panel1.Controls.Add(this.btnStop1);
-            this.panel1.Controls.Add(this.btnStart1);
             this.panel1.Controls.Add(this.label324321);
             this.panel1.Controls.Add(this.label43241);
             this.panel1.Controls.Add(this.lblDurationOfTime);
@@ -172,6 +171,7 @@
             this.panel1.Controls.Add(this.lblPlayerName);
             this.panel1.Controls.Add(this.lblTableStatus1);
             this.panel1.Controls.Add(this.lblTable1);
+            this.panel1.Controls.Add(this.btnStart1);
             this.panel1.Controls.Add(this.btnPause1);
             this.panel1.Location = new System.Drawing.Point(25, 87);
             this.panel1.Name = "panel1";
@@ -226,6 +226,7 @@
             this.btnStop1.TabIndex = 12;
             this.btnStop1.Text = "Stop";
             this.btnStop1.UseVisualStyleBackColor = false;
+            this.btnStop1.Click += new System.EventHandler(this.btnStop1_Click);
             // 
             // btnStart1
             // 
@@ -301,7 +302,7 @@
             this.lblTableStatus1.Padding = new System.Windows.Forms.Padding(89, 0, 90, 0);
             this.lblTableStatus1.Size = new System.Drawing.Size(281, 17);
             this.lblTableStatus1.TabIndex = 2;
-            this.lblTableStatus1.Text = "playing";
+            this.lblTableStatus1.Text = "Free";
             this.lblTableStatus1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTable1
@@ -328,6 +329,7 @@
             this.btnPause1.Text = "Pause";
             this.btnPause1.UseVisualStyleBackColor = false;
             this.btnPause1.Visible = false;
+            this.btnPause1.Click += new System.EventHandler(this.btnPause1_Click);
             // 
             // label1
             // 
