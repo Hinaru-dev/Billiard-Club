@@ -168,8 +168,11 @@ namespace Billiard_Club
             switch (TableID)
             {
                 case enTableID.Table1:
-                    price = decimal.Round((nudHourlyPrice.Value / 60 * Convert.ToInt32(mtbDuration1.Text.Substring(0, 2))), 2);
-                    break;
+                    if (isDurationFinished(TableID))
+                        price = decimal.Round((nudHourlyPrice.Value / 60 * Convert.ToInt32(mtbDuration1.Text.Substring(0, 2))), 2);
+                    else
+                        price = decimal.Round((nudHourlyPrice.Value / 60 * Convert.ToInt32(lblTimeCounter1.Text.Substring(0, 2))), 2);
+                        break;
                 //case enTableID.Table1:
                 //    price = decimal.Round((nudHourlyPrice.Value / 60 * Convert.ToInt32(mtbDuration1.Text.Substring(0, 2))), 2);
                 //    break;
@@ -254,11 +257,14 @@ namespace Billiard_Club
         // ida dar stop lazm n'hidi pause btn w n'show start btn
         private void Stop(enTableID TableID)
         {
-            ChangeTableStatus(TableID, enTableOp.Stop);
-            
-            if ((startedTables & (byte)TableID) == (byte)TableID)
+            // in case table is not started -> quit
+            // in case table is in started list remove it and stop
+            if ((startedTables & (byte)TableID) != (byte)TableID)
+                return; 
+            else
                 startedTables -= (byte)TableID;
 
+            ChangeTableStatus(TableID, enTableOp.Stop);
             SetThePrice(TableID);
 
             if ((pausedTables & (byte)TableID) == (byte)TableID)
