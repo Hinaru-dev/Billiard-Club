@@ -96,6 +96,9 @@
             this.label22 = new System.Windows.Forms.Label();
             this.btnPause4 = new System.Windows.Forms.Button();
             this.panelX = new System.Windows.Forms.Panel();
+            this.lblTotalCustomersToday = new System.Windows.Forms.Label();
+            this.lblAvailableTables = new System.Windows.Forms.Label();
+            this.lblReservedTables = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
@@ -111,7 +114,6 @@
             this.lblTimeIn7 = new System.Windows.Forms.Label();
             this.mtbDuration7 = new System.Windows.Forms.MaskedTextBox();
             this.btnStop7 = new System.Windows.Forms.Button();
-            this.btnStart7 = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
@@ -120,6 +122,7 @@
             this.label34 = new System.Windows.Forms.Label();
             this.lblTableStatus7 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
+            this.btnStart7 = new System.Windows.Forms.Button();
             this.btnPause7 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lblThePrice6 = new System.Windows.Forms.Label();
@@ -159,6 +162,7 @@
             this.lblHourlyPrice = new System.Windows.Forms.Label();
             this.rbDark = new System.Windows.Forms.RadioButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblEarnedIncome = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -903,6 +907,10 @@
             // panelX
             // 
             this.panelX.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelX.Controls.Add(this.lblEarnedIncome);
+            this.panelX.Controls.Add(this.lblTotalCustomersToday);
+            this.panelX.Controls.Add(this.lblAvailableTables);
+            this.panelX.Controls.Add(this.lblReservedTables);
             this.panelX.Controls.Add(this.lblTime);
             this.panelX.Controls.Add(this.label29);
             this.panelX.Controls.Add(this.lblDate);
@@ -916,6 +924,33 @@
             this.panelX.Name = "panelX";
             this.panelX.Size = new System.Drawing.Size(216, 256);
             this.panelX.TabIndex = 19;
+            // 
+            // lblTotalCustomersToday
+            // 
+            this.lblTotalCustomersToday.AutoSize = true;
+            this.lblTotalCustomersToday.Location = new System.Drawing.Point(144, 182);
+            this.lblTotalCustomersToday.Name = "lblTotalCustomersToday";
+            this.lblTotalCustomersToday.Size = new System.Drawing.Size(48, 17);
+            this.lblTotalCustomersToday.TabIndex = 26;
+            this.lblTotalCustomersToday.Text = "50000";
+            // 
+            // lblAvailableTables
+            // 
+            this.lblAvailableTables.AutoSize = true;
+            this.lblAvailableTables.Location = new System.Drawing.Point(153, 151);
+            this.lblAvailableTables.Name = "lblAvailableTables";
+            this.lblAvailableTables.Size = new System.Drawing.Size(48, 17);
+            this.lblAvailableTables.TabIndex = 25;
+            this.lblAvailableTables.Text = "50000";
+            // 
+            // lblReservedTables
+            // 
+            this.lblReservedTables.AutoSize = true;
+            this.lblReservedTables.Location = new System.Drawing.Point(156, 120);
+            this.lblReservedTables.Name = "lblReservedTables";
+            this.lblReservedTables.Size = new System.Drawing.Size(48, 17);
+            this.lblReservedTables.TabIndex = 24;
+            this.lblReservedTables.Text = "50000";
             // 
             // lblTime
             // 
@@ -967,9 +1002,9 @@
             this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label24.Location = new System.Drawing.Point(14, 182);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(181, 17);
+            this.label24.Size = new System.Drawing.Size(124, 17);
             this.label24.TabIndex = 16;
-            this.label24.Text = "Total Customers Today:";
+            this.label24.Text = "Today\'s Clients:";
             // 
             // label23
             // 
@@ -989,9 +1024,9 @@
             this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label25.Location = new System.Drawing.Point(14, 151);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(138, 17);
+            this.label25.Size = new System.Drawing.Size(133, 17);
             this.label25.TabIndex = 15;
-            this.label25.Text = "Available Tables :";
+            this.label25.Text = "Available Tables:";
             // 
             // label26
             // 
@@ -1090,19 +1125,6 @@
             this.btnStop7.UseVisualStyleBackColor = false;
             this.btnStop7.Click += new System.EventHandler(this.btnStop7_Click);
             // 
-            // btnStart7
-            // 
-            this.btnStart7.BackColor = System.Drawing.Color.White;
-            this.btnStart7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnStart7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnStart7.Location = new System.Drawing.Point(23, 89);
-            this.btnStart7.Name = "btnStart7";
-            this.btnStart7.Size = new System.Drawing.Size(75, 30);
-            this.btnStart7.TabIndex = 11;
-            this.btnStart7.Text = "Start";
-            this.btnStart7.UseVisualStyleBackColor = false;
-            this.btnStart7.Click += new System.EventHandler(this.btnStart7_Click);
-            // 
             // label30
             // 
             this.label30.AutoSize = true;
@@ -1178,6 +1200,19 @@
             this.label36.Size = new System.Drawing.Size(216, 17);
             this.label36.TabIndex = 0;
             this.label36.Text = "Table 7";
+            // 
+            // btnStart7
+            // 
+            this.btnStart7.BackColor = System.Drawing.Color.White;
+            this.btnStart7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnStart7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnStart7.Location = new System.Drawing.Point(23, 89);
+            this.btnStart7.Name = "btnStart7";
+            this.btnStart7.Size = new System.Drawing.Size(75, 30);
+            this.btnStart7.TabIndex = 11;
+            this.btnStart7.Text = "Start";
+            this.btnStart7.UseVisualStyleBackColor = false;
+            this.btnStart7.Click += new System.EventHandler(this.btnStart7_Click);
             // 
             // btnPause7
             // 
@@ -1615,6 +1650,15 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // lblEarnedIncome
+            // 
+            this.lblEarnedIncome.AutoSize = true;
+            this.lblEarnedIncome.Location = new System.Drawing.Point(146, 213);
+            this.lblEarnedIncome.Name = "lblEarnedIncome";
+            this.lblEarnedIncome.Size = new System.Drawing.Size(56, 17);
+            this.lblEarnedIncome.TabIndex = 27;
+            this.lblEarnedIncome.Text = "50000$";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1793,6 +1837,10 @@
         private System.Windows.Forms.Label lblThePrice5;
         private System.Windows.Forms.Label lblTimeCounter5;
         private System.Windows.Forms.Label lblTimeIn5;
+        private System.Windows.Forms.Label lblTotalCustomersToday;
+        private System.Windows.Forms.Label lblAvailableTables;
+        private System.Windows.Forms.Label lblReservedTables;
+        private System.Windows.Forms.Label lblEarnedIncome;
     }
 }
 

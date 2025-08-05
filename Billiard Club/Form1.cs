@@ -12,8 +12,10 @@ namespace Billiard_Club
 {
     public partial class Form1 : Form
     {
+        // functionng enums
         enum enTableID { Table1 = 2, Table2 = 4, Table3 = 8, Table4 = 16, Table5 = 32, Table6 = 64, Table7 = 128 };
         enum enTableOp { Start = 0, Pause = 1, Continue = 2, Stop = 3 };
+        // functioning data
         const byte TotalTablesCount = 7;
         byte startedTables = 0;
         byte pausedTables = 0;
@@ -21,10 +23,13 @@ namespace Billiard_Club
         public Form1()
         {
             InitializeComponent();
+            
+            // Initialize Summary Panel
             lblDate.Text = DateTime.Now.ToShortDateString();
             lblTime.Text = DateTime.Now.ToLongTimeString();
             timer1.Start();
-            //lblTheme.Text = "00:00";
+            InitializeSummaryStatistics();
+            UpdateSummaryPanel();
 
             for (byte i = 1; i<=TotalTablesCount; i++)
                 InitializeTable((enTableID)Math.Pow(2,i));
@@ -324,6 +329,11 @@ namespace Billiard_Club
             btnPause.Visible = false;
             btnStart.Visible = true;
 
+
+            // update summary panel
+            UpdateSummaryStatistics(enTableOp.Stop, lblThePrice.Text);
+            UpdateSummaryPanel();
+
             if (MessageBox.Show("game finished\nPrice is: " + lblThePrice.Text, TableID.ToString() + ": Game Over") == DialogResult.OK)
                 InitializeTable(TableID);
         }
@@ -342,6 +352,10 @@ namespace Billiard_Club
             // terminating start
             btnPause.Visible = true;
             btnStart.Visible = false;
+
+            // update summary panel
+            UpdateSummaryStatistics(enTableOp.Start);
+            UpdateSummaryPanel();
         }
 
         private bool isValidDuration(MaskedTextBox Duration)
@@ -624,6 +638,51 @@ namespace Billiard_Club
         private void btnStop7_Click(object sender, EventArgs e)
         {
             Stop(enTableID.Table7, btnPause7, btnStart7, lblThePrice7);
+        }
+
+        private void InitializeSummaryStatistics()
+        {
+            lblReservedTables.Tag = (byte)0;
+            lblAvailableTables.Tag = (byte)TotalTablesCount;
+            lblTotalCustomersToday.Tag = (byte)0;
+            lblEarnedIncome.Tag = (decimal)0.00m;
+        }
+
+        private decimal ConvertPriceStringToDecimal(string lblPrice)
+        {
+            return Convert.ToDecimal(lblPrice.Substring(0, lblPrice.Length - 1));
+        }
+
+        private void UpdateSummaryStatistics(enTableOp TableOp, string lblPrice = null)
+        {
+            decimal PayedPrice = lblPrice == null ? 0.00M : ConvertPriceStringToDecimal(lblPrice);
+ 
+            switch (TableOp)
+            {
+
+                case enTableOp.Start:
+                    lblReservedTables.Tag = Convert.ToByte(lblReservedTables.Tag) + 1;
+                    lblAvailableTables.Tag = Convert.ToByte(lblAvailableTables.Tag) - 1;
+                    return;
+
+                case enTableOp.Stop:
+                    lblReservedTables.Tag = Convert.ToByte(lblReservedTables.Tag) - 1;
+                    lblAvailableTables.Tag = Convert.ToByte(lblAvailableTables.Tag) + 1;
+                    lblTotalCustomersToday.Tag = Convert.ToByte(lblTotalCustomersToday.Tag) + 1;
+                    lblEarnedIncome.Tag = Convert.ToDecimal(lblEarnedIncome.Tag) + PayedPrice;
+                    return;
+
+                default:
+                    return;
+            }
+        }
+
+        private void UpdateSummaryPanel()
+        {
+            lblReservedTables.Text = lblReservedTables.Tag.ToString();
+            lblAvailableTables.Text = lblAvailableTables.Tag.ToString();
+            lblTotalCustomersToday.Text = lblTotalCustomersToday.Tag.ToString();
+            lblEarnedIncome.Text = lblEarnedIncome.Tag.ToString() + "$";
         }
     }
 }
