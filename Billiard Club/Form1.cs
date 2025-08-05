@@ -8,10 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-// now i need to test well then generalize everything to all tables instead of table1 only generalize
-
-
 namespace Billiard_Club
 {
     public partial class Form1 : Form
@@ -440,7 +436,6 @@ namespace Billiard_Club
                     return lblTimeCounter7.Text.Substring(0, 2) == mtbDuration7.Text.Substring(0, 2);
             }
 
-            // here should be return true to stop any glitched timer
             MessageBox.Show("is time duration function check glitched and didn't find table");
             return true;
         }
@@ -492,10 +487,6 @@ namespace Billiard_Club
                     {
                         if (isDurationFinished((enTableID)TwoPowTableID))
                         {
-                            // at this point 
-                            // i can perform a table stop 
-                            // or show message box 
-                            // or a notifyIcon
                             PerformStop((enTableID)TwoPowTableID);
                             continue;
                         }
@@ -505,8 +496,6 @@ namespace Billiard_Club
                 }
             }
         }
-
-        // btnStart(btn which_button_clicked) function
 
         private bool NameAndTimeValidationsBeforeStart(TextBox tbPlayerName, MaskedTextBox mtbDuration)
         {
@@ -636,7 +625,5 @@ namespace Billiard_Club
         {
             Stop(enTableID.Table7, btnPause7, btnStart7, lblThePrice7);
         }
-
-        
     }
 }
