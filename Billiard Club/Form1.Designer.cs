@@ -46,7 +46,7 @@
             this.lblTable1 = new System.Windows.Forms.Label();
             this.btnStart1 = new System.Windows.Forms.Button();
             this.btnPause1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblBilliardClub = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblThePrice2 = new System.Windows.Forms.Label();
             this.lblTimeCounter2 = new System.Windows.Forms.Label();
@@ -61,7 +61,7 @@
             this.tbPlayerName2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.lblTableStatus2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblTable2 = new System.Windows.Forms.Label();
             this.btnPause2 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblThePrice3 = new System.Windows.Forms.Label();
@@ -77,7 +77,7 @@
             this.tbPlayerName3 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.lblTableStatus3 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lblTable3 = new System.Windows.Forms.Label();
             this.btnPause3 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblThePrice4 = new System.Windows.Forms.Label();
@@ -93,9 +93,10 @@
             this.tbPlayerName4 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.lblTableStatus4 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
+            this.lblTable4 = new System.Windows.Forms.Label();
             this.btnPause4 = new System.Windows.Forms.Button();
             this.panelX = new System.Windows.Forms.Panel();
+            this.lblEarnedIncome = new System.Windows.Forms.Label();
             this.lblTotalCustomersToday = new System.Windows.Forms.Label();
             this.lblAvailableTables = new System.Windows.Forms.Label();
             this.lblReservedTables = new System.Windows.Forms.Label();
@@ -121,7 +122,7 @@
             this.tbPlayerName7 = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
             this.lblTableStatus7 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
+            this.lblTable7 = new System.Windows.Forms.Label();
             this.btnStart7 = new System.Windows.Forms.Button();
             this.btnPause7 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -138,7 +139,7 @@
             this.tbPlayerName6 = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
             this.lblTableStatus6 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
+            this.lblTable6 = new System.Windows.Forms.Label();
             this.btnPause6 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lblThePrice5 = new System.Windows.Forms.Label();
@@ -154,7 +155,7 @@
             this.tbPlayerName5 = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
             this.lblTableStatus5 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
+            this.lblTable5 = new System.Windows.Forms.Label();
             this.btnPause5 = new System.Windows.Forms.Button();
             this.lblTheme = new System.Windows.Forms.Label();
             this.rbLight = new System.Windows.Forms.RadioButton();
@@ -162,7 +163,6 @@
             this.lblHourlyPrice = new System.Windows.Forms.Label();
             this.rbDark = new System.Windows.Forms.RadioButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lblEarnedIncome = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -365,16 +365,16 @@
             this.btnPause1.Visible = false;
             this.btnPause1.Click += new System.EventHandler(this.btnPause1_Click);
             // 
-            // label1
+            // lblBilliardClub
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(359, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(282, 58);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Billiard Club";
+            this.lblBilliardClub.AutoSize = true;
+            this.lblBilliardClub.Font = new System.Drawing.Font("Palatino Linotype", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBilliardClub.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblBilliardClub.Location = new System.Drawing.Point(359, 12);
+            this.lblBilliardClub.Name = "lblBilliardClub";
+            this.lblBilliardClub.Size = new System.Drawing.Size(282, 58);
+            this.lblBilliardClub.TabIndex = 13;
+            this.lblBilliardClub.Text = "Billiard Club";
             // 
             // panel2
             // 
@@ -392,7 +392,7 @@
             this.panel2.Controls.Add(this.tbPlayerName2);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.lblTableStatus2);
-            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.lblTable2);
             this.panel2.Controls.Add(this.btnPause2);
             this.panel2.Location = new System.Drawing.Point(269, 87);
             this.panel2.Name = "panel2";
@@ -526,17 +526,17 @@
             this.lblTableStatus2.Text = "Free";
             this.lblTableStatus2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label7
+            // lblTable2
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label7.Location = new System.Drawing.Point(0, 0);
-            this.label7.Name = "label7";
-            this.label7.Padding = new System.Windows.Forms.Padding(80, 0, 80, 0);
-            this.label7.Size = new System.Drawing.Size(216, 17);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Table 2";
+            this.lblTable2.AutoSize = true;
+            this.lblTable2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblTable2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblTable2.Location = new System.Drawing.Point(0, 0);
+            this.lblTable2.Name = "lblTable2";
+            this.lblTable2.Padding = new System.Windows.Forms.Padding(80, 0, 80, 0);
+            this.lblTable2.Size = new System.Drawing.Size(216, 17);
+            this.lblTable2.TabIndex = 0;
+            this.lblTable2.Text = "Table 2";
             // 
             // btnPause2
             // 
@@ -568,7 +568,7 @@
             this.panel3.Controls.Add(this.tbPlayerName3);
             this.panel3.Controls.Add(this.label13);
             this.panel3.Controls.Add(this.lblTableStatus3);
-            this.panel3.Controls.Add(this.label15);
+            this.panel3.Controls.Add(this.lblTable3);
             this.panel3.Controls.Add(this.btnPause3);
             this.panel3.Location = new System.Drawing.Point(513, 87);
             this.panel3.Name = "panel3";
@@ -702,17 +702,17 @@
             this.lblTableStatus3.Text = "Free";
             this.lblTableStatus3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label15
+            // lblTable3
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label15.Location = new System.Drawing.Point(0, 0);
-            this.label15.Name = "label15";
-            this.label15.Padding = new System.Windows.Forms.Padding(80, 0, 80, 0);
-            this.label15.Size = new System.Drawing.Size(216, 17);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Table 3";
+            this.lblTable3.AutoSize = true;
+            this.lblTable3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblTable3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblTable3.Location = new System.Drawing.Point(0, 0);
+            this.lblTable3.Name = "lblTable3";
+            this.lblTable3.Padding = new System.Windows.Forms.Padding(80, 0, 80, 0);
+            this.lblTable3.Size = new System.Drawing.Size(216, 17);
+            this.lblTable3.TabIndex = 0;
+            this.lblTable3.Text = "Table 3";
             // 
             // btnPause3
             // 
@@ -744,7 +744,7 @@
             this.panel4.Controls.Add(this.tbPlayerName4);
             this.panel4.Controls.Add(this.label20);
             this.panel4.Controls.Add(this.lblTableStatus4);
-            this.panel4.Controls.Add(this.label22);
+            this.panel4.Controls.Add(this.lblTable4);
             this.panel4.Controls.Add(this.btnPause4);
             this.panel4.Location = new System.Drawing.Point(759, 87);
             this.panel4.Name = "panel4";
@@ -878,17 +878,17 @@
             this.lblTableStatus4.Text = "Free";
             this.lblTableStatus4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label22
+            // lblTable4
             // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label22.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label22.Location = new System.Drawing.Point(0, 0);
-            this.label22.Name = "label22";
-            this.label22.Padding = new System.Windows.Forms.Padding(80, 0, 80, 0);
-            this.label22.Size = new System.Drawing.Size(216, 17);
-            this.label22.TabIndex = 0;
-            this.label22.Text = "Table 4";
+            this.lblTable4.AutoSize = true;
+            this.lblTable4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblTable4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblTable4.Location = new System.Drawing.Point(0, 0);
+            this.lblTable4.Name = "lblTable4";
+            this.lblTable4.Padding = new System.Windows.Forms.Padding(80, 0, 80, 0);
+            this.lblTable4.Size = new System.Drawing.Size(216, 17);
+            this.lblTable4.TabIndex = 0;
+            this.lblTable4.Text = "Table 4";
             // 
             // btnPause4
             // 
@@ -924,6 +924,15 @@
             this.panelX.Name = "panelX";
             this.panelX.Size = new System.Drawing.Size(216, 256);
             this.panelX.TabIndex = 19;
+            // 
+            // lblEarnedIncome
+            // 
+            this.lblEarnedIncome.AutoSize = true;
+            this.lblEarnedIncome.Location = new System.Drawing.Point(146, 213);
+            this.lblEarnedIncome.Name = "lblEarnedIncome";
+            this.lblEarnedIncome.Size = new System.Drawing.Size(56, 17);
+            this.lblEarnedIncome.TabIndex = 27;
+            this.lblEarnedIncome.Text = "50000$";
             // 
             // lblTotalCustomersToday
             // 
@@ -1067,7 +1076,7 @@
             this.panel7.Controls.Add(this.tbPlayerName7);
             this.panel7.Controls.Add(this.label34);
             this.panel7.Controls.Add(this.lblTableStatus7);
-            this.panel7.Controls.Add(this.label36);
+            this.panel7.Controls.Add(this.lblTable7);
             this.panel7.Controls.Add(this.btnStart7);
             this.panel7.Controls.Add(this.btnPause7);
             this.panel7.Location = new System.Drawing.Point(513, 367);
@@ -1189,17 +1198,17 @@
             this.lblTableStatus7.Text = "Free";
             this.lblTableStatus7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label36
+            // lblTable7
             // 
-            this.label36.AutoSize = true;
-            this.label36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label36.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label36.Location = new System.Drawing.Point(0, 0);
-            this.label36.Name = "label36";
-            this.label36.Padding = new System.Windows.Forms.Padding(80, 0, 80, 0);
-            this.label36.Size = new System.Drawing.Size(216, 17);
-            this.label36.TabIndex = 0;
-            this.label36.Text = "Table 7";
+            this.lblTable7.AutoSize = true;
+            this.lblTable7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblTable7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblTable7.Location = new System.Drawing.Point(0, 0);
+            this.lblTable7.Name = "lblTable7";
+            this.lblTable7.Padding = new System.Windows.Forms.Padding(80, 0, 80, 0);
+            this.lblTable7.Size = new System.Drawing.Size(216, 17);
+            this.lblTable7.TabIndex = 0;
+            this.lblTable7.Text = "Table 7";
             // 
             // btnStart7
             // 
@@ -1244,7 +1253,7 @@
             this.panel6.Controls.Add(this.tbPlayerName6);
             this.panel6.Controls.Add(this.label41);
             this.panel6.Controls.Add(this.lblTableStatus6);
-            this.panel6.Controls.Add(this.label43);
+            this.panel6.Controls.Add(this.lblTable6);
             this.panel6.Controls.Add(this.btnPause6);
             this.panel6.Location = new System.Drawing.Point(269, 367);
             this.panel6.Name = "panel6";
@@ -1378,17 +1387,17 @@
             this.lblTableStatus6.Text = "Free";
             this.lblTableStatus6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label43
+            // lblTable6
             // 
-            this.label43.AutoSize = true;
-            this.label43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label43.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label43.Location = new System.Drawing.Point(0, 0);
-            this.label43.Name = "label43";
-            this.label43.Padding = new System.Windows.Forms.Padding(80, 0, 80, 0);
-            this.label43.Size = new System.Drawing.Size(216, 17);
-            this.label43.TabIndex = 0;
-            this.label43.Text = "Table 6";
+            this.lblTable6.AutoSize = true;
+            this.lblTable6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblTable6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblTable6.Location = new System.Drawing.Point(0, 0);
+            this.lblTable6.Name = "lblTable6";
+            this.lblTable6.Padding = new System.Windows.Forms.Padding(80, 0, 80, 0);
+            this.lblTable6.Size = new System.Drawing.Size(216, 17);
+            this.lblTable6.TabIndex = 0;
+            this.lblTable6.Text = "Table 6";
             // 
             // btnPause6
             // 
@@ -1420,7 +1429,7 @@
             this.panel5.Controls.Add(this.tbPlayerName5);
             this.panel5.Controls.Add(this.label48);
             this.panel5.Controls.Add(this.lblTableStatus5);
-            this.panel5.Controls.Add(this.label50);
+            this.panel5.Controls.Add(this.lblTable5);
             this.panel5.Controls.Add(this.btnPause5);
             this.panel5.Location = new System.Drawing.Point(25, 367);
             this.panel5.Name = "panel5";
@@ -1554,17 +1563,17 @@
             this.lblTableStatus5.Text = "Free";
             this.lblTableStatus5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label50
+            // lblTable5
             // 
-            this.label50.AutoSize = true;
-            this.label50.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label50.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label50.Location = new System.Drawing.Point(0, 0);
-            this.label50.Name = "label50";
-            this.label50.Padding = new System.Windows.Forms.Padding(80, 0, 80, 0);
-            this.label50.Size = new System.Drawing.Size(216, 17);
-            this.label50.TabIndex = 0;
-            this.label50.Text = "Table 5";
+            this.lblTable5.AutoSize = true;
+            this.lblTable5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblTable5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblTable5.Location = new System.Drawing.Point(0, 0);
+            this.lblTable5.Name = "lblTable5";
+            this.lblTable5.Padding = new System.Windows.Forms.Padding(80, 0, 80, 0);
+            this.lblTable5.Size = new System.Drawing.Size(216, 17);
+            this.lblTable5.TabIndex = 0;
+            this.lblTable5.Text = "Table 5";
             // 
             // btnPause5
             // 
@@ -1644,20 +1653,12 @@
             this.rbDark.TabStop = true;
             this.rbDark.Text = "Dark";
             this.rbDark.UseVisualStyleBackColor = true;
+            this.rbDark.CheckedChanged += new System.EventHandler(this.rbDark_CheckedChanged);
             // 
             // timer1
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // lblEarnedIncome
-            // 
-            this.lblEarnedIncome.AutoSize = true;
-            this.lblEarnedIncome.Location = new System.Drawing.Point(146, 213);
-            this.lblEarnedIncome.Name = "lblEarnedIncome";
-            this.lblEarnedIncome.Size = new System.Drawing.Size(56, 17);
-            this.lblEarnedIncome.TabIndex = 27;
-            this.lblEarnedIncome.Text = "50000$";
             // 
             // Form1
             // 
@@ -1674,7 +1675,7 @@
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblBilliardClub);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.rbDark);
@@ -1719,7 +1720,7 @@
         private System.Windows.Forms.Label label43241;
         private System.Windows.Forms.Label lblDurationOfTime;
         private System.Windows.Forms.Label label432;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblBilliardClub;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnStop2;
         private System.Windows.Forms.Button btnStart2;
@@ -1730,7 +1731,7 @@
         private System.Windows.Forms.TextBox tbPlayerName2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblTableStatus2;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblTable2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnStop3;
         private System.Windows.Forms.Button btnStart3;
@@ -1741,7 +1742,7 @@
         private System.Windows.Forms.TextBox tbPlayerName3;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label lblTableStatus3;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblTable3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnStop4;
         private System.Windows.Forms.Button btnStart4;
@@ -1752,7 +1753,7 @@
         private System.Windows.Forms.TextBox tbPlayerName4;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label lblTableStatus4;
-        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label lblTable4;
         private System.Windows.Forms.Panel panelX;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button btnStop7;
@@ -1764,7 +1765,7 @@
         private System.Windows.Forms.TextBox tbPlayerName7;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label lblTableStatus7;
-        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label lblTable7;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnStop6;
         private System.Windows.Forms.Button btnStart6;
@@ -1775,7 +1776,7 @@
         private System.Windows.Forms.TextBox tbPlayerName6;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label lblTableStatus6;
-        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label lblTable6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnStop5;
         private System.Windows.Forms.Button btnStart5;
@@ -1786,7 +1787,7 @@
         private System.Windows.Forms.TextBox tbPlayerName5;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label lblTableStatus5;
-        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label lblTable5;
         private System.Windows.Forms.Label lblTheme;
         private System.Windows.Forms.RadioButton rbLight;
         private System.Windows.Forms.Label lblDate;

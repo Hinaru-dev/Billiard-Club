@@ -684,5 +684,68 @@ namespace Billiard_Club
             lblTotalCustomersToday.Text = lblTotalCustomersToday.Tag.ToString();
             lblEarnedIncome.Text = lblEarnedIncome.Tag.ToString() + "$";
         }
+
+        private void paintTableAndItsStatus(Color color)
+        {
+            lblTable1.ForeColor = color;
+            lblTable2.ForeColor = color;
+            lblTable3.ForeColor = color;
+            lblTable4.ForeColor = color;
+            lblTable5.ForeColor = color;
+            lblTable6.ForeColor = color;
+            lblTable7.ForeColor = color;
+
+            lblTableStatus1.ForeColor = color;
+            lblTableStatus2.ForeColor = color;
+            lblTableStatus3.ForeColor = color;
+            lblTableStatus4.ForeColor = color;
+            lblTableStatus5.ForeColor = color;
+            lblTableStatus6.ForeColor = color;
+            lblTableStatus7.ForeColor = color;
+        }
+
+        private void rbDark_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbDark.Checked)
+            {
+                // general black
+                this.BackColor = Color.Black;
+                foreach (Control ctrl in this.Controls)
+                {
+                    ctrl.BackColor = Color.Black;
+                    ctrl.ForeColor = Color.Gray;
+                }
+
+                // final touches
+                lblBilliardClub.ForeColor = Color.LimeGreen;
+                btnQuit.ForeColor = Color.Black;
+                btnQuit.BackColor = Color.Red;
+                paintTableAndItsStatus(Color.Black);
+
+            }
+            else
+            {
+                // general black
+                this.BackColor = SystemColors.Control;
+                foreach (Control ctrl in this.Controls)
+                {
+                    ctrl.BackColor = SystemColors.ControlLight;
+                    ctrl.ForeColor = SystemColors.ControlText;
+                }
+
+                // final touches
+                lblBilliardClub.ForeColor = Color.FromArgb(255, 128, 0);
+                btnQuit.BackColor = Color.FromArgb(227, 0, 0);
+                paintTableAndItsStatus(SystemColors.ControlText);
+
+                // fixing some color mess :')
+                lblTheme.BackColor = SystemColors.Control;
+                rbDark.BackColor = SystemColors.Control;
+                rbLight.BackColor = SystemColors.Control;
+                lblBilliardClub.BackColor = SystemColors.Control;
+                nudHourlyPrice.BackColor = SystemColors.Control;
+                lblHourlyPrice.BackColor = SystemColors.Control;
+            }
+        }
     }
 }
