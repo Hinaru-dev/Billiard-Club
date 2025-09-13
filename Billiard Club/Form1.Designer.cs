@@ -30,22 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.btnQuit = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.mtbDuration1 = new System.Windows.Forms.MaskedTextBox();
-            this.lblThePrice1 = new System.Windows.Forms.Label();
-            this.lblTimeCounter1 = new System.Windows.Forms.Label();
-            this.lblTimeIn1 = new System.Windows.Forms.Label();
-            this.btnStop1 = new System.Windows.Forms.Button();
-            this.label324321 = new System.Windows.Forms.Label();
-            this.label43241 = new System.Windows.Forms.Label();
-            this.lblDurationOfTime = new System.Windows.Forms.Label();
-            this.label432 = new System.Windows.Forms.Label();
-            this.tbPlayerName1 = new System.Windows.Forms.TextBox();
-            this.lblPlayerName = new System.Windows.Forms.Label();
-            this.lblTableStatus1 = new System.Windows.Forms.Label();
-            this.lblTable1 = new System.Windows.Forms.Label();
-            this.btnStart1 = new System.Windows.Forms.Button();
-            this.btnPause1 = new System.Windows.Forms.Button();
             this.lblBilliardClub = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblThePrice2 = new System.Windows.Forms.Label();
@@ -163,7 +147,7 @@
             this.lblHourlyPrice = new System.Windows.Forms.Label();
             this.rbDark = new System.Windows.Forms.RadioButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel1.SuspendLayout();
+            this.ucTable1 = new Billiard_Club.ucTable();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -188,182 +172,6 @@
             this.btnQuit.Text = "X";
             this.btnQuit.UseVisualStyleBackColor = false;
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel1.Controls.Add(this.mtbDuration1);
-            this.panel1.Controls.Add(this.lblThePrice1);
-            this.panel1.Controls.Add(this.lblTimeCounter1);
-            this.panel1.Controls.Add(this.lblTimeIn1);
-            this.panel1.Controls.Add(this.btnStop1);
-            this.panel1.Controls.Add(this.label324321);
-            this.panel1.Controls.Add(this.label43241);
-            this.panel1.Controls.Add(this.lblDurationOfTime);
-            this.panel1.Controls.Add(this.label432);
-            this.panel1.Controls.Add(this.tbPlayerName1);
-            this.panel1.Controls.Add(this.lblPlayerName);
-            this.panel1.Controls.Add(this.lblTableStatus1);
-            this.panel1.Controls.Add(this.lblTable1);
-            this.panel1.Controls.Add(this.btnStart1);
-            this.panel1.Controls.Add(this.btnPause1);
-            this.panel1.Location = new System.Drawing.Point(25, 87);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(216, 256);
-            this.panel1.TabIndex = 1;
-            // 
-            // mtbDuration1
-            // 
-            this.mtbDuration1.CausesValidation = false;
-            this.mtbDuration1.Location = new System.Drawing.Point(139, 164);
-            this.mtbDuration1.Mask = "99:\\0\\0";
-            this.mtbDuration1.Name = "mtbDuration1";
-            this.mtbDuration1.Size = new System.Drawing.Size(59, 22);
-            this.mtbDuration1.TabIndex = 28;
-            this.mtbDuration1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblThePrice1
-            // 
-            this.lblThePrice1.AutoSize = true;
-            this.lblThePrice1.Location = new System.Drawing.Point(91, 225);
-            this.lblThePrice1.Name = "lblThePrice1";
-            this.lblThePrice1.Size = new System.Drawing.Size(69, 17);
-            this.lblThePrice1.TabIndex = 27;
-            this.lblThePrice1.Text = "DateTime";
-            // 
-            // lblTimeCounter1
-            // 
-            this.lblTimeCounter1.AutoSize = true;
-            this.lblTimeCounter1.Location = new System.Drawing.Point(114, 196);
-            this.lblTimeCounter1.Name = "lblTimeCounter1";
-            this.lblTimeCounter1.Size = new System.Drawing.Size(69, 17);
-            this.lblTimeCounter1.TabIndex = 26;
-            this.lblTimeCounter1.Text = "DateTime";
-            // 
-            // lblTimeIn1
-            // 
-            this.lblTimeIn1.AutoSize = true;
-            this.lblTimeIn1.Location = new System.Drawing.Point(76, 138);
-            this.lblTimeIn1.Name = "lblTimeIn1";
-            this.lblTimeIn1.Size = new System.Drawing.Size(69, 17);
-            this.lblTimeIn1.TabIndex = 24;
-            this.lblTimeIn1.Text = "DateTime";
-            // 
-            // btnStop1
-            // 
-            this.btnStop1.BackColor = System.Drawing.Color.White;
-            this.btnStop1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnStop1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnStop1.Location = new System.Drawing.Point(117, 89);
-            this.btnStop1.Name = "btnStop1";
-            this.btnStop1.Size = new System.Drawing.Size(75, 30);
-            this.btnStop1.TabIndex = 12;
-            this.btnStop1.Text = "Stop";
-            this.btnStop1.UseVisualStyleBackColor = false;
-            this.btnStop1.Click += new System.EventHandler(this.btnStop1_Click);
-            // 
-            // label324321
-            // 
-            this.label324321.AutoSize = true;
-            this.label324321.Location = new System.Drawing.Point(8, 225);
-            this.label324321.Name = "label324321";
-            this.label324321.Size = new System.Drawing.Size(77, 17);
-            this.label324321.TabIndex = 10;
-            this.label324321.Text = "The Price :";
-            // 
-            // label43241
-            // 
-            this.label43241.AutoSize = true;
-            this.label43241.Location = new System.Drawing.Point(8, 196);
-            this.label43241.Name = "label43241";
-            this.label43241.Size = new System.Drawing.Size(101, 17);
-            this.label43241.TabIndex = 9;
-            this.label43241.Text = "Time Counter :";
-            // 
-            // lblDurationOfTime
-            // 
-            this.lblDurationOfTime.AutoSize = true;
-            this.lblDurationOfTime.Location = new System.Drawing.Point(8, 167);
-            this.lblDurationOfTime.Name = "lblDurationOfTime";
-            this.lblDurationOfTime.Size = new System.Drawing.Size(124, 17);
-            this.lblDurationOfTime.TabIndex = 8;
-            this.lblDurationOfTime.Text = "Duration Of Time :";
-            // 
-            // label432
-            // 
-            this.label432.AutoSize = true;
-            this.label432.Location = new System.Drawing.Point(8, 138);
-            this.label432.Name = "label432";
-            this.label432.Size = new System.Drawing.Size(62, 17);
-            this.label432.TabIndex = 7;
-            this.label432.Text = "Time In :";
-            // 
-            // tbPlayerName1
-            // 
-            this.tbPlayerName1.Location = new System.Drawing.Point(109, 50);
-            this.tbPlayerName1.Name = "tbPlayerName1";
-            this.tbPlayerName1.Size = new System.Drawing.Size(100, 22);
-            this.tbPlayerName1.TabIndex = 4;
-            // 
-            // lblPlayerName
-            // 
-            this.lblPlayerName.AutoSize = true;
-            this.lblPlayerName.Location = new System.Drawing.Point(8, 53);
-            this.lblPlayerName.Name = "lblPlayerName";
-            this.lblPlayerName.Size = new System.Drawing.Size(101, 17);
-            this.lblPlayerName.TabIndex = 3;
-            this.lblPlayerName.Text = "Player Name : ";
-            // 
-            // lblTableStatus1
-            // 
-            this.lblTableStatus1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblTableStatus1.BackColor = System.Drawing.Color.Lime;
-            this.lblTableStatus1.Location = new System.Drawing.Point(-32, 20);
-            this.lblTableStatus1.Name = "lblTableStatus1";
-            this.lblTableStatus1.Padding = new System.Windows.Forms.Padding(89, 0, 90, 0);
-            this.lblTableStatus1.Size = new System.Drawing.Size(281, 17);
-            this.lblTableStatus1.TabIndex = 2;
-            this.lblTableStatus1.Text = "Free";
-            this.lblTableStatus1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblTable1
-            // 
-            this.lblTable1.AutoSize = true;
-            this.lblTable1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblTable1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblTable1.Location = new System.Drawing.Point(0, 0);
-            this.lblTable1.Name = "lblTable1";
-            this.lblTable1.Padding = new System.Windows.Forms.Padding(80, 0, 80, 0);
-            this.lblTable1.Size = new System.Drawing.Size(216, 17);
-            this.lblTable1.TabIndex = 0;
-            this.lblTable1.Text = "Table 1";
-            // 
-            // btnStart1
-            // 
-            this.btnStart1.BackColor = System.Drawing.Color.White;
-            this.btnStart1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnStart1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnStart1.Location = new System.Drawing.Point(23, 89);
-            this.btnStart1.Name = "btnStart1";
-            this.btnStart1.Size = new System.Drawing.Size(75, 30);
-            this.btnStart1.TabIndex = 11;
-            this.btnStart1.Text = "Start";
-            this.btnStart1.UseVisualStyleBackColor = false;
-            this.btnStart1.Click += new System.EventHandler(this.btnStart1_Click);
-            // 
-            // btnPause1
-            // 
-            this.btnPause1.BackColor = System.Drawing.Color.White;
-            this.btnPause1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPause1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnPause1.Location = new System.Drawing.Point(23, 89);
-            this.btnPause1.Name = "btnPause1";
-            this.btnPause1.Size = new System.Drawing.Size(75, 30);
-            this.btnPause1.TabIndex = 29;
-            this.btnPause1.Text = "Pause";
-            this.btnPause1.UseVisualStyleBackColor = false;
-            this.btnPause1.Visible = false;
-            this.btnPause1.Click += new System.EventHandler(this.btnPause1_Click);
             // 
             // lblBilliardClub
             // 
@@ -1660,11 +1468,19 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // ucTable1
+            // 
+            this.ucTable1.Location = new System.Drawing.Point(28, 87);
+            this.ucTable1.Name = "ucTable1";
+            this.ucTable1.Size = new System.Drawing.Size(214, 256);
+            this.ucTable1.TabIndex = 30;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1001, 670);
+            this.Controls.Add(this.ucTable1);
             this.Controls.Add(this.lblHourlyPrice);
             this.Controls.Add(this.nudHourlyPrice);
             this.Controls.Add(this.lblTheme);
@@ -1676,7 +1492,6 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.lblBilliardClub);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.rbDark);
             this.Controls.Add(this.rbLight);
@@ -1684,8 +1499,6 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -1709,17 +1522,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnQuit;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblTable1;
-        private System.Windows.Forms.Label lblTableStatus1;
-        private System.Windows.Forms.TextBox tbPlayerName1;
-        private System.Windows.Forms.Label lblPlayerName;
-        private System.Windows.Forms.Button btnStop1;
-        private System.Windows.Forms.Button btnStart1;
-        private System.Windows.Forms.Label label324321;
-        private System.Windows.Forms.Label label43241;
-        private System.Windows.Forms.Label lblDurationOfTime;
-        private System.Windows.Forms.Label label432;
         private System.Windows.Forms.Label lblBilliardClub;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnStop2;
@@ -1799,13 +1601,8 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.MaskedTextBox mtbDuration1;
-        private System.Windows.Forms.Label lblThePrice1;
-        private System.Windows.Forms.Label lblTimeCounter1;
-        private System.Windows.Forms.Label lblTimeIn1;
         private System.Windows.Forms.NumericUpDown nudHourlyPrice;
         private System.Windows.Forms.Label lblHourlyPrice;
-        private System.Windows.Forms.Button btnPause1;
         private System.Windows.Forms.RadioButton rbDark;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.MaskedTextBox mtbDuration2;
@@ -1842,6 +1639,7 @@
         private System.Windows.Forms.Label lblAvailableTables;
         private System.Windows.Forms.Label lblReservedTables;
         private System.Windows.Forms.Label lblEarnedIncome;
+        private ucTable ucTable1;
     }
 }
 

@@ -56,7 +56,7 @@ namespace Billiard_Club
             switch (tableID)
             {
                 case enTableID.Table1:
-                    affectTableStatusChange(lblTableStatus1, Status, Value);
+                    //affectTableStatusChange(lblTableStatus1, Status, Value);
                     break;
                 case enTableID.Table2:
                     affectTableStatusChange(lblTableStatus2, Status, Value);
@@ -84,7 +84,7 @@ namespace Billiard_Club
             switch (TableID)
             {
                 case enTableID.Table1:
-                    lblTimeIn1.Text = DateTime.Now.ToShortTimeString();
+                    //lblTimeIn1.Text = DateTime.Now.ToShortTimeString();
                     return;
                 case enTableID.Table2:
                     lblTimeIn2.Text = DateTime.Now.ToShortTimeString();
@@ -114,11 +114,11 @@ namespace Billiard_Club
             switch(TableID)
             {
                 case enTableID.Table1:
-                    tbPlayerName1.Clear();
-                    lblTimeIn1.Text = string.Empty;
-                    mtbDuration1.Clear();
-                    lblTimeCounter1.Text = "00:00";
-                    lblThePrice1.Text = "0$";
+                    //tbPlayerName1.Clear();
+                    //lblTimeIn1.Text = string.Empty;
+                    //mtbDuration1.Clear();
+                    //lblTimeCounter1.Text = "00:00";
+                    //lblThePrice1.Text = "0$";
                     return;
                 case enTableID.Table2:
                     tbPlayerName2.Clear();
@@ -170,7 +170,7 @@ namespace Billiard_Club
             switch (TableID)
             {
                 case enTableID.Table1:
-                    lblTimeCounter1.Text = "00:00";
+                    //lblTimeCounter1.Text = "00:00";
                     return;
                 case enTableID.Table2:
                     lblTimeCounter2.Text = "00:00";
@@ -200,11 +200,11 @@ namespace Billiard_Club
             switch (TableID)
             {
                 case enTableID.Table1:
-                    if (isDurationFinished(TableID) || TableOp == enTableOp.Start)
-                        price = decimal.Round((nudHourlyPrice.Value / 60 * Convert.ToInt32(mtbDuration1.Text.Substring(0, 2))), 2);
-                    else
-                        price = decimal.Round((nudHourlyPrice.Value / 60 * Convert.ToInt32(lblTimeCounter1.Text.Substring(0, 2))), 2);
-                    break;
+                    //if (isDurationFinished(TableID) || TableOp == enTableOp.Start)
+                    //    price = decimal.Round((nudHourlyPrice.Value / 60 * Convert.ToInt32(//mtbDuration1.Text.Substring(0, 2))), 2);
+                    //else
+                    //    price = decimal.Round((nudHourlyPrice.Value / 60 * Convert.ToInt32(//lblTimeCounter1.Text.Substring(0, 2))), 2);
+                    //break;
 
                 case enTableID.Table2:
                     if (isDurationFinished(TableID) || TableOp == enTableOp.Start)
@@ -257,7 +257,7 @@ namespace Billiard_Club
             switch (TableID)
             {
                 case enTableID.Table1:
-                    lblThePrice1.Text = CalculatePrice(TableID, TableOp);
+                    //lblThePrice1.Text = CalculatePrice(TableID, TableOp);
                     return;
                 case enTableID.Table2:
                     lblThePrice2.Text = CalculatePrice(TableID, TableOp);
@@ -393,9 +393,9 @@ namespace Billiard_Club
             switch (TableID)
             {
                 case enTableID.Table1:
-                    TimeSpan.TryParse(lblTimeCounter1.Text.Insert(0, "00:"), out TimeCounter);
-                    TimeCounter = TimeCounter + new TimeSpan(0, 0, 1);
-                    lblTimeCounter1.Text = formatTimeCounter(TimeCounter);
+                    //TimeSpan.TryParse(//lblTimeCounter1.Text.Insert(0, "00:"), out TimeCounter);
+                    //TimeCounter = TimeCounter + new TimeSpan(0, 0, 1);
+                    //lblTimeCounter1.Text = formatTimeCounter(TimeCounter);
                     return;
                 case enTableID.Table2:
                     TimeSpan.TryParse(lblTimeCounter2.Text.Insert(0, "00:"), out TimeCounter);
@@ -435,7 +435,9 @@ namespace Billiard_Club
             switch (TableID)
             {
                 case enTableID.Table1:
-                    return lblTimeCounter1.Text.Substring(0, 2) == mtbDuration1.Text.Substring(0, 2);
+                    //return //lblTimeCounter1.Text.Substring(0, 2) == //mtbDuration1.Text.Substring(0, 2);
+                    break; // break added after commenting table1 
+                    // commented table1 to convert to ucTable
                 case enTableID.Table2:
                     return lblTimeCounter2.Text.Substring(0, 2) == mtbDuration2.Text.Substring(0, 2);
                 case enTableID.Table3:
@@ -459,7 +461,7 @@ namespace Billiard_Club
             switch (TableID)
             {
                 case enTableID.Table1:
-                    Stop(TableID, btnPause1, btnStart1, lblThePrice1);
+                    //Stop(TableID, btnPause1, btnStart1, lblThePrice1);
                     break;
                 case enTableID.Table2:
                     Stop(TableID, btnPause2, btnStart2, lblThePrice2);
@@ -530,8 +532,8 @@ namespace Billiard_Club
 
         private void btnStart1_Click(object sender, EventArgs e)
         {
-            if (NameAndTimeValidationsBeforeStart(tbPlayerName1, mtbDuration1))
-                Start(enTableID.Table1, btnPause1, btnStart1);
+            //if (NameAndTimeValidationsBeforeStart(//tbPlayerName1, //mtbDuration1))
+                //Start(enTableID.Table1, btnPause1, btnStart1);
         }
 
         private void btnStart2_Click(object sender, EventArgs e)
@@ -607,7 +609,7 @@ namespace Billiard_Club
 
         private void btnStop1_Click(object sender, EventArgs e)
         {
-            Stop(enTableID.Table1, btnPause1, btnStart1, lblThePrice1);
+            //Stop(enTableID.Table1, btnPause1, btnStart1, lblThePrice1);
         }
 
         private void btnStop2_Click(object sender, EventArgs e)
@@ -687,7 +689,7 @@ namespace Billiard_Club
 
         private void paintTableAndItsStatus(Color color)
         {
-            lblTable1.ForeColor = color;
+            //lblTable1.ForeColor = color;
             lblTable2.ForeColor = color;
             lblTable3.ForeColor = color;
             lblTable4.ForeColor = color;
@@ -695,7 +697,7 @@ namespace Billiard_Club
             lblTable6.ForeColor = color;
             lblTable7.ForeColor = color;
 
-            lblTableStatus1.ForeColor = color;
+            //lblTableStatus1.ForeColor = color;
             lblTableStatus2.ForeColor = color;
             lblTableStatus3.ForeColor = color;
             lblTableStatus4.ForeColor = color;
