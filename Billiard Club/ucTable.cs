@@ -24,6 +24,12 @@ namespace Billiard_Club
             lblTimeCounter.Text = "00:00";
             lblThePrice.Text = "0$";
         }
+        
+        public void paintTableAndItsStatus(Color color)
+        {
+            lblTable.ForeColor = color;
+            lblTableStatus.ForeColor = color;
+        }
 
         public event Action<Form1.enTableOp, string> ButtonClicked;
 
@@ -142,15 +148,13 @@ namespace Billiard_Club
         {
             decimal price = 0;
 
-            if (_parentForm != null)
-            {
-                if (isDurationFinished() || TableOp == enTableOp.Start)
+            if (isDurationFinished() || TableOp == enTableOp.Start)
 
-                    price = decimal.Round((_parentForm.getNudHourlyPrice() / 60 * Convert.ToInt32(mtbDuration.Text.Substring(0, 2))), 2);
+                price = decimal.Round((_parentForm.getNudHourlyPrice() / 60 * Convert.ToInt32(mtbDuration.Text.Substring(0, 2))), 2);
 
-                else
-                    price = decimal.Round((_parentForm.getNudHourlyPrice() / 60 * Convert.ToInt32(lblTimeCounter.Text.Substring(0, 2))), 2);
-            }
+            else
+                price = decimal.Round((_parentForm.getNudHourlyPrice() / 60 * Convert.ToInt32(lblTimeCounter.Text.Substring(0, 2))), 2);
+            
 
             return price.ToString() + "$";
         }
@@ -277,6 +281,7 @@ namespace Billiard_Club
 
             double TableNumber = Math.Log(tableID, 2);
             lblTable.Text = "Table " + TableNumber.ToString();
+            InitializeTable();
         }
 
         private void btnStart_Click(object sender, EventArgs e)
