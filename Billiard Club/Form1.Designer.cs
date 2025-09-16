@@ -1,4 +1,6 @@
-﻿namespace Billiard_Club
+﻿using System;
+
+namespace Billiard_Club
 {
     partial class Form1
     {
@@ -147,7 +149,30 @@
             this.lblHourlyPrice = new System.Windows.Forms.Label();
             this.rbDark = new System.Windows.Forms.RadioButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.ucTable1 = new Billiard_Club.ucTable();
+
+            //------------------------
+            //
+            //
+            //
+            //
+            //
+            // >>>> STOPPED HERE <<<<
+            // >>>> STOPPED HERE <<<<
+            // >>>> STOPPED HERE <<<<
+            // >>>> STOPPED HERE <<<<
+            // >>>> STOPPED HERE <<<<
+            // >>>> STOPPED HERE <<<<
+            // >>>> STOPPED HERE <<<<
+            // >>>> STOPPED HERE <<<<
+            //
+            //
+            //
+            //
+            // ---------------------
+            this.ucTable1 = new Billiard_Club.ucTable(this, (byte)enTableID.Table1);
+            // after finishing put the previous line
+            // in of the next line bricoola line 
+            //this.ucTable1 = new Billiard_Club.ucTable();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -1470,10 +1495,12 @@
             // 
             // ucTable1
             // 
-            this.ucTable1.Location = new System.Drawing.Point(28, 87);
+            this.ucTable1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ucTable1.Location = new System.Drawing.Point(26, 87);
             this.ucTable1.Name = "ucTable1";
             this.ucTable1.Size = new System.Drawing.Size(214, 256);
-            this.ucTable1.TabIndex = 30;
+            this.ucTable1.TabIndex = 32;
+            this.ucTable1.ButtonClicked += new System.Action<Billiard_Club.Form1.enTableOp, string>(this.ucTable1_ButtonClicked);
             // 
             // Form1
             // 

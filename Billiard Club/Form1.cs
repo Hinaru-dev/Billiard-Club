@@ -12,18 +12,28 @@ namespace Billiard_Club
 {
     public partial class Form1 : Form
     {
+        public decimal getNudHourlyPrice()
+        {
+            return nudHourlyPrice.Value;
+        }
+
         // functionng enums
-        enum enTableID { Table1 = 2, Table2 = 4, Table3 = 8, Table4 = 16, Table5 = 32, Table6 = 64, Table7 = 128 };
-        enum enTableOp { Start = 0, Pause = 1, Continue = 2, Stop = 3 };
+        public enum enTableID { Table1 = 2, Table2 = 4, Table3 = 8, Table4 = 16, Table5 = 32, Table6 = 64, Table7 = 128 };
+        public enum enTableOp { Start = 0, Pause = 1, Continue = 2, Stop = 3 };
         // functioning data
-        const byte TotalTablesCount = 7;
-        byte startedTables = 0;
-        byte pausedTables = 0;
+        public const byte TotalTablesCount = 7;
+        public byte startedTables = 0;
+        public byte pausedTables = 0;
 
         public Form1()
         {
             InitializeComponent();
-            
+
+            // using this way to use constructor
+            // without blocking form1[design]
+            // from working 
+            //this.ucTable1 = new Billiard_Club.ucTable(this, 2);
+
             // Initialize Summary Panel
             lblDate.Text = DateTime.Now.ToShortDateString();
             lblTime.Text = DateTime.Now.ToLongTimeString();
@@ -436,7 +446,7 @@ namespace Billiard_Club
             {
                 case enTableID.Table1:
                     //return //lblTimeCounter1.Text.Substring(0, 2) == //mtbDuration1.Text.Substring(0, 2);
-                    break; // break added after commenting table1 
+                    //break; // break added after commenting table1 
                     // commented table1 to convert to ucTable
                 case enTableID.Table2:
                     return lblTimeCounter2.Text.Substring(0, 2) == mtbDuration2.Text.Substring(0, 2);
@@ -484,6 +494,36 @@ namespace Billiard_Club
             }
         }
 
+        void TimeUpdate_TableCheck(enTableID TableID)
+        {
+            switch (TableID)
+            {
+                case enTableID.Table1:
+                    ucTable1.TableTimeUpdate();
+                    return;
+                case enTableID.Table2:
+                    //ucTable2.TableTimeUpdate();
+                    return;
+                case enTableID.Table3:
+                    //ucTable3.TableTimeUpdate();
+                    return;
+                case enTableID.Table4:
+                    //ucTable4.TableTimeUpdate();
+                    return;
+                case enTableID.Table5:
+                    //ucTable5.TableTimeUpdate();
+                    return;
+                case enTableID.Table6:
+                    //ucTable6.TableTimeUpdate();
+                    return;
+                case enTableID.Table7:
+                    //ucTable7.TableTimeUpdate();
+                    return;
+                default:
+                    return;
+            }
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             // update app time
@@ -497,18 +537,7 @@ namespace Billiard_Club
                 for (byte i = 1; i <= TotalTablesCount; i++)
                 {
                     byte TwoPowTableID = (byte)Math.Pow(2, i);
-
-                    // table should be in started list but not in paused list
-                    if ((startedTables & TwoPowTableID) == TwoPowTableID && (TwoPowTableID & pausedTables) != TwoPowTableID)
-                    {
-                        if (isDurationFinished((enTableID)TwoPowTableID))
-                        {
-                            PerformStop((enTableID)TwoPowTableID);
-                            continue;
-                        }
-
-                        UpdateTableTimeCounter((enTableID)TwoPowTableID);
-                    }
+                    TimeUpdate_TableCheck((enTableID)TwoPowTableID);
                 }
             }
         }
@@ -661,7 +690,6 @@ namespace Billiard_Club
  
             switch (TableOp)
             {
-
                 case enTableOp.Start:
                     lblReservedTables.Tag = Convert.ToByte(lblReservedTables.Tag) + 1;
                     lblAvailableTables.Tag = Convert.ToByte(lblAvailableTables.Tag) - 1;
@@ -748,6 +776,34 @@ namespace Billiard_Club
                 nudHourlyPrice.BackColor = SystemColors.Control;
                 lblHourlyPrice.BackColor = SystemColors.Control;
             }
+        }
+
+        private void ucTable_ButtonClicked(enTableOp TableOp, string lblPrice, byte TableID)
+        {
+            switch (TableOp)
+            {
+                case enTableOp.Start:
+                    if ((startedTables & (byte)TableID) == 0)
+                        startedTables += (byte)TableID;
+                    // update summary panel
+                    UpdateSummaryStatistics(enTableOp.Start);
+                    UpdateSummaryPanel();
+                    return;
+
+                case enTableOp.Stop:
+                    // update summary panel
+                    UpdateSummaryStatistics(enTableOp.Stop, lblPrice);
+                    UpdateSummaryPanel();
+                    return;
+
+                default:
+                    return;
+            }
+        }
+
+        private void ucTable1_ButtonClicked(enTableOp TableOp, string lblPrice = null)
+        {
+            ucTable_ButtonClicked(TableOp, lblPrice, (byte)Math.Pow(2,1)); 
         }
     }
 }

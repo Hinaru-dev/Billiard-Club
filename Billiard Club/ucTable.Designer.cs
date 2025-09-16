@@ -93,6 +93,7 @@
             this.btnStop.TabIndex = 39;
             this.btnStop.Text = "Stop";
             this.btnStop.UseVisualStyleBackColor = false;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // label324321
             // 
@@ -179,6 +180,7 @@
             this.btnStart.TabIndex = 38;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = false;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // btnPause
             // 
@@ -192,6 +194,7 @@
             this.btnPause.Text = "Pause";
             this.btnPause.UseVisualStyleBackColor = false;
             this.btnPause.Visible = false;
+            this.btnPause.Click += new System.EventHandler(this.btnPause_Click);
             // 
             // ucTable
             // 
